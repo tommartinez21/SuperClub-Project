@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+  <%- include('../partials/head') %>
 
-<%- include('../partials/head') %>
+  <body>
+    <main>
+      <%- include('../partials/header') %> <%- include("../partials/navcat") %>
 
-    <body>
-        <main>
+      <div class="cont-product-heroes">
+        <div class="products-heroes">
+          <div class="icon-brand">
+            <img src="/imgs/disneybrand.png" alt="" />
+          </div>
+          <div>
+            <span>50% OFF en Combo Plus</span>
+            <p>
+              Con tu Tarjeta Santander y <br />
+              40.000 puntos SuperClub.
+            </p>
+          </div>
+        </div>
+        <div class="products-heroes">
+          <div class="icon-brand">
+            <img src="/imgs/hbobrand.png" alt="" />
+          </div>
+          <div>
+            <span>50% OFF en HBO Max</span>
+            <p>
+              Con tu Tarjeta Santander y <br />
+              50.000 puntos SuperClub.
+            </p>
+          </div>
+        </div>
+      </div>
+      <%- include("../partials/tepuedeinteresar",
+      {otrosproductos:otrosproductos}) %>
 
-            <%- include('../partials/header') %>
+      <div class="maspedidos cont-products-items">
+        <h3>Más pedidos</h3>
+        <div>
+          <% for( let i = 0; i < 2; i++ ) { %> <%
+          otrosproductos.forEach(producto => { %> <%-
+          include("../partials/product-item" , {producto}) %> <% }) %> <% } %>
+        </div>
+      </div>
 
-                <%- include("../partials/navcat") %>
-
-                    <div class="cont-product-heroes">
-                        <div class="products-heroes">
-                            <div class="icon-brand">
-                                <img src="/imgs/disneybrand.png" alt="">
-                            </div>
-                            <div>
-                                <span>50% OFF en Combo Plus</span>
-                                <p>Con tu Tarjeta Santander y <br> 40.000 puntos SuperClub.</p>
-                            </div>
-                        </div>
-                        <div class="products-heroes">
-                            <div class="icon-brand">
-                                <img src="/imgs/hbobrand.png" alt="">
-                            </div>
-                            <div>
-                                <span>50% OFF en HBO Max</span>
-                                <p>Con tu Tarjeta Santander y <br> 50.000 puntos SuperClub.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <%- include("../partials/tepuedeinteresar") %>
-
-                        <div class="maspedidos cont-products-items">
-                            <h3>Más pedidos</h3>
-                            <div>
-                                <% for (let i=0;i<8;i++){ %>
-                                    <%- include("../partials/product-item") %>
-                                        <% } %>
-                            </div>
-                        </div>
-
-                        <%- include("../partials/navcat") %>
-        </main>
-        <%- include('../partials/footer') %>
-    </body>
-
+      <%- include("../partials/navcat") %>
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
 </html>
