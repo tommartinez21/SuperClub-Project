@@ -3,12 +3,16 @@ let preciofinal = 0;
 
 const cartController = {
   renderCart(req, res) {
-    res.render("pages/cart", {
-      productos,
-      preciofinal,
-      title: "Carrito",
-      session: req.session,
-    });
+    if (!req.session.user) {
+      res.redirect("/login");
+    } else {
+      res.render("pages/cart", {
+        productos,
+        preciofinal,
+        title: "Carrito",
+        session: req.session,
+      });
+    }
   },
 };
 

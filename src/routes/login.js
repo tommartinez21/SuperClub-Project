@@ -1,7 +1,6 @@
 const express = require("express");
 const { check, body } = require("express-validator");
 const { actions, loginController } = require("../controllers/loginController");
-const { nextTick } = require("process");
 const router = express.Router();
 
 const validations = [
