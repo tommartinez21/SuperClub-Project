@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "firstname": "Juan",
+    "lastname": "Perez",
+    "email": "juanperez@algo.com",
+    "password": "juanperez123",
+    "profilePicture": "https://live.staticflickr.com/5186/5759378955_3fc5792769_q.jpg"
+  }
+]
