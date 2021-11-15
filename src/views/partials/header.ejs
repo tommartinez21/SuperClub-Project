@@ -15,6 +15,7 @@
     </form>
 
     <div class="header-buttons">
+      <% if (session.user) { %>
       <a href="/cart">
         <button class="cart-button">
           <i class="fas fa-shopping-cart"></i>
@@ -25,6 +26,14 @@
         <img src="/imgs/perfil.png" alt="Imagen de perfil" /> <%=
         session.user.firstname %>
       </button>
+      <% } else { %>
+      <a href="/login">
+        <button class="redirect-button">Iniciar sesión</button>
+      </a>
+      <a href="/register">
+        <button class="redirect-button">Registrarse</button>
+      </a>
+      <% } %>
     </div>
   </div>
   <form class="search-bar sb-responsive" action="/" method="get">

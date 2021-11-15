@@ -61,6 +61,10 @@ header {
   gap: 8px;
 }
 
+.header-buttons a {
+  text-decoration: none;
+}
+
 .cart-button {
   width: 32px;
   height: 32px;
@@ -118,5 +122,30 @@ header {
 }
 
 .user-button:hover {
+  background: rgba(236, 0, 0, 1);
+}
+
+.redirect-button {
+  width: auto;
+  height: 32px;
+  background: rgba(73, 79, 81, 1);
+  border: none;
+  border-radius: 16px;
+  padding: 4px;
+  font-size: 15 px;
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.redirect-button img {
+  width: 24px;
+  height: 24px;
+}
+
+.redirect-button:hover {
   background: rgba(236, 0, 0, 1);
 }
