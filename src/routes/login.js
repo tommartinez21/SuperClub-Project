@@ -1,6 +1,7 @@
 const express = require("express");
 const { check, body } = require("express-validator");
-const loginController = require("../controllers/loginController");
+const { actions, loginController } = require("../controllers/loginController");
+const { nextTick } = require("process");
 const router = express.Router();
 
 const validations = [
@@ -11,6 +12,16 @@ const validations = [
     .isEmail()
     .withMessage("El formato del email no es válido"),
   check("password").notEmpty().withMessage("El campo de contraseña está vacío"),
+  body("password").custom((value, { req }) => {
+    let user = actions.getUser(req.body.email);
+    if (!user) {
+      throw new Error("El email no existe");
+    }
+    if (!actions.validatePass(user, value)) {
+      throw new Error("La contraseña es incorrecta");
+    }
+    return true;
+  }),
 ];
 
 router.get("/", loginController.renderLogin);

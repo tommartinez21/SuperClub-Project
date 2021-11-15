@@ -15,27 +15,23 @@ const actions = {
 
 const loginController = {
   renderLogin(req, res) {
-    res.render("pages/login", { title: "login" });
+    res.render("pages/login", { title: "Login" });
   },
 
   postLogin: (req, res) => {
     let errors = validationResult(req);
     if (errors.isEmpty()) {
-      let user = actions.getUser(req.body.email);
-      if (user) {
-        if (actions.validatePass(user, req.body.password)) {
-          req.session.user = user;
-          res.redirect("/");
-        } else {
-          res.redirect("/login"); // Contraseña incorrecta
-        }
-      } else {
-        res.redirect("/login"); // Mail no existe
-      }
+      user = actions.getUser(req.body.email);
+      req.session.user = user;
+      res.redirect("/");
     } else {
-      res.redirect("pages/login"); // Errores de validación
+      res.render("pages/login", {
+        title: "Login",
+        errors: errors.array(),
+        old: req.body,
+      });
     }
   },
 };
 
-module.exports = loginController;
+module.exports = { actions, loginController };
