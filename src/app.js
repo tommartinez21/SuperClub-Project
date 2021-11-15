@@ -45,7 +45,7 @@ app.use("/cart", cartRoutes);
 app.use("/product", productRoutes);
 
 app.get("*", (req, res) =>
-  res.status(404).render("pages/error", { title: "404 !" })
+  res.status(404).render("pages/error", { title: "404!" })
 );
 
 app.listen(PORT, () => console.log("toy ready"));

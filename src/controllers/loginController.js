@@ -15,7 +15,7 @@ const actions = {
 
 const loginController = {
   renderLogin(req, res) {
-    res.render("pages/login", { title: "Login" });
+    res.render("pages/login", { title: "Login", session: req.session });
   },
 
   postLogin: (req, res) => {
@@ -23,7 +23,11 @@ const loginController = {
     if (errors.isEmpty()) {
       user = actions.getUser(req.body.email);
       req.session.user = user;
-      res.redirect("/");
+      if (req.session.previousUrl == "/register") {
+        res.redirect("/");
+      } else {
+        res.redirect(req.session.previousUrl);
+      }
     } else {
       res.render("pages/login", {
         title: "Login",

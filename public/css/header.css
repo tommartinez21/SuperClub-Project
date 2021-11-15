@@ -131,7 +131,7 @@ header {
   background: rgba(73, 79, 81, 1);
   border: none;
   border-radius: 16px;
-  padding: 4px;
+  padding: 4px 8px;
   font-size: 15 px;
   color: rgba(255, 255, 255, 1);
   display: flex;
