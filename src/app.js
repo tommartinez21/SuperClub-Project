@@ -27,8 +27,8 @@ app.use(express.json());
 app.use(
   session({
     secret: process.env.SESSION_SECRET || "superclub-secret",
-    resave: true,
-    saveUninitialized: true,
+    resave: false,
+    saveUninitialized: false,
   })
 );
 

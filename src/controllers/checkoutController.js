@@ -1,7 +1,7 @@
 const checkoutController = {
-    renderCheckout(req, res) {
-        res.render("pages/checkout", { title: "Pago" })
-    }
-}
+  renderCheckout(req, res) {
+    res.render("pages/checkout", { title: "Pago", session: req.session });
+  },
+};
 
-module.exports = checkoutController
+module.exports = checkoutController;
