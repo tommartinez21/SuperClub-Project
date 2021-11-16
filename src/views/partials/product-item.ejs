@@ -1,7 +1,11 @@
 <a href="/product/123" class="product-item-link">
     <div class="product-item">
         <div class="product-img">
+           <% if (product.image) { %>
             <img src=<%= product.image %>  alt="">
+           <% } else { %>
+            <%- include('image-not-found') %> 
+            <% } %>
         </div>
         <div class="product-info">
             <div class="product-name">
