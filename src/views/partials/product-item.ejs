@@ -1,14 +1,15 @@
 <a href="/product/123" class="product-item-link">
     <div class="product-item">
         <div class="product-img">
-            <img src="/imgs/havanna1.jpg" alt="">
+            <img src=<%= product.image %>  alt="">
         </div>
         <div class="product-info">
             <div class="product-name">
-                <span>NOMBRE DEL PRODUCTO O SERVICIO</span>
+                <span><%= product.title %>  </span>
             </div>
+            <div></div>
             <div class="product-price">
-                <span>XX.XXX</span>
+                <span><%= product.price %> </span>
                 <span>PUNTOS SUPERCLUB</span>
             </div>
         </div>

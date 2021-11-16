@@ -1,5 +1,6 @@
 .product-item {
     max-width: 256px;
+    height:350px;
     border-radius: 16px;
     padding: 8px;
     background-color: #fff;
@@ -51,6 +52,7 @@
 .product-name {
     position: relative;
     margin-right: 10px;
+    width: 65%;
 }
 
 .product-name::after {
@@ -63,6 +65,10 @@
     bottom: 0;
 }
 
+.product-price {
+    width: 35%;
+}
+
 .product-price span:last-child {
     display: inline-block;
     font-size: 8px;
@@ -73,6 +79,7 @@
 .product-item-link {
     text-decoration: none;
     color: black;
+    height: 350px;
     display: block;
 }
 
