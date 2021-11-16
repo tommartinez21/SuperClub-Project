@@ -19,6 +19,7 @@ const cartController = {
       return;
     }
 
+    req.session.previousUrl = req.originalUrl;
     if (!req.session.user) {
       console.error("El usuario no está logeado");
       res.redirect("/login");

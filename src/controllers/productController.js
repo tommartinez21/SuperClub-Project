@@ -25,6 +25,7 @@ const productController = {
   },
 
   renderProduct(req, res) {
+    req.session.previousUrl = req.originalUrl;
     res.render("pages/product", {
       title: `Producto ${req.params.id}`,
       producto: producto,

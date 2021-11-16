@@ -1,5 +1,6 @@
-const { validationResult } = require("express-validator");
 const fs = require("fs");
+const { validationResult } = require("express-validator");
+const bcrypt = require("bcryptjs");
 
 const actions = {
   getUser: (email) => {
@@ -9,13 +10,13 @@ const actions = {
   },
 
   validatePass: (user, password) => {
-    return user.password == password;
+    return bcrypt.compareSync(password, user.password);
   },
 };
 
 const loginController = {
   renderLogin(req, res) {
-    res.render("pages/login", { title: "Login" });
+    res.render("pages/login", { title: "Login", session: req.session });
   },
 
   postLogin: (req, res) => {
@@ -23,7 +24,11 @@ const loginController = {
     if (errors.isEmpty()) {
       user = actions.getUser(req.body.email);
       req.session.user = user;
-      res.redirect("/");
+      if (!req.session.previousUrl || req.session.previousUrl == "/register") {
+        res.redirect("/");
+      } else {
+        res.redirect(req.session.previousUrl);
+      }
     } else {
       res.render("pages/login", {
         title: "Login",
