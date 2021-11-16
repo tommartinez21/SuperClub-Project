@@ -51,6 +51,14 @@
     "id": 9,
     "nombreUsuario": "kevin",
     "emailUsuario": "kevin@sdfsadf.com",
-    "contraseñaUsuario": "$2a$10$GMBVmNpCOukS4EHouxOjAuN17P5OlCF/epktOXx6V9ArYbVno4mG6"
+    "contraseñaUsuario": "$2a$10$GMBVmNpCOukS4EHouxOjAuN17P5OlCF/epktOXx6V9ArYbVno4mG6",
+    "cart": []
+  },
+  {
+    "id": 10,
+    "nombreUsuario": "nico",
+    "emailUsuario": "nico@gmail.es",
+    "contraseñaUsuario": "$2a$10$UB5HNbPA53zMoFT0XxtUl..MsLFlhUDi538e8CbHEA6MQkKAjrGYC",
+    "cart": []
   }
 ]

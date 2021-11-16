@@ -11,10 +11,9 @@
           <h2>¡Hola!</h2>
           <% if (locals.errors) { errors.forEach(element => { %>
           <p><%= element.msg %></p>
-          <% }) %> <% } %>
-          <% if(locals.usuarioRegistrado){%>
-            <p><%=usuarioRegistrado%></p>
-            <% } %>
+          <% }) %> <% } %> <% if(locals.usuarioRegistrado){%>
+          <p><%=usuarioRegistrado%></p>
+          <% } %>
           <form method="post" action="/login" class="formulario">
             <input type="text" name="email" id="email" placeholder="Tu email"
             value="<%= locals.old ? old.email : "" %>" />

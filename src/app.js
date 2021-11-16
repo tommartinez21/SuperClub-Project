@@ -30,7 +30,7 @@ app.use(express.static("public"));
 
 app.use(
   session({
-    secret: process.env.SESSION_SECRET,
+    secret: process.env.SESSION_SECRET || "superclub-secret",
     resave: false,
     saveUninitialized: false,
   })

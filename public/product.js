@@ -13,10 +13,10 @@ const producto = {
 };
 
 const viejo = {
-  id: 1,
+  id: "6191cb73c654f145d4326b87",
   categoria: "Alimentos",
   title: "Alfajores Havanna Chocolate 12 Unidades",
-  price: "19900",
+  price: "16000",
   imgs: ["havanna2.jpg", "havanna1.jpg", "havanna4.jpg"],
   description: [
     "Voucher válido para una caja de 12 alfajores mixtos Havanna.",

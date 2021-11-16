@@ -32,7 +32,12 @@
             <strong class="puntos"><%=producto.price%> </strong>
             <p>PUNTOS<br />SUPERCLUB</p>
           </div>
-          <button class="btn-carrito">Agregar al Carrito</button>
+          <form action="/product/addToCart" method="get">
+            <input type="text" name="id" hidden value=<%= producto._id %> />
+            <button name="agregar" class="btn-carrito">
+              Agregar al Carrito
+            </button>
+          </form>
           <div class="page-product-description">
             <%# (producto.description).forEach(parrafo => { %>
             <p><%= producto.description %></p>
