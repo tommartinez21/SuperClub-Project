@@ -10,6 +10,8 @@ const registerController = {
 
     processRegister: (req, res) => {
 
+      req.session.previousUrl = req.originalUrl;
+
         let errors = validationResult(req);
 
         if (errors.errors.length != 0)
@@ -41,4 +43,4 @@ const registerController = {
         },
     }
 
-module.exports = registerController
+module.exports = registerController;

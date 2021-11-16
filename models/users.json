@@ -40,5 +40,11 @@
     "nombreUsuario": "tomito",
     "emailUsuario": "tomas@gmail.com",
     "contraseñaUsuario": "$2a$10$S6xGhTbYewg8OLsmnuyyeO8XkddnIEKoGR3n3x8OIOJ2Sp8CAJuXK"
+  },
+  {
+    "id": 8,
+    "nombreUsuario": "tomito21",
+    "emailUsuario": "tomito@gmail.com",
+    "contraseñaUsuario": "$2a$10$At2mWnkCuIm6JjXqzYZ7K.fG.r4IxXMyS02G7YVWLh.fYMERZ78R6"
   }
 ]

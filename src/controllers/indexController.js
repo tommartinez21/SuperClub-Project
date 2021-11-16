@@ -1,17 +1,19 @@
 const fetch = require('node-fetch');
-const {check}= require('express-validator');
+const { check } = require('express-validator');
 
 const indexController = {
-    renderIndex: async (req, res) => {
+  renderIndex: async (req, res) => {
 
-        let response1 = await fetch('https://dhfakestore.herokuapp.com/api/products/suggested');
-        let response2 = await fetch('https://dhfakestore.herokuapp.com/api/products/mostwanted');
-        let products = await response1.json();
-        let products2 = await response2.json();
+    req.session.previousUrl = req.originalUrl;
 
-        res.render("pages/index", { title: "Home", products, products2 })
+    let response1 = await fetch('https://dhfakestore.herokuapp.com/api/products/suggested');
+    let response2 = await fetch('https://dhfakestore.herokuapp.com/api/products/mostwanted');
+    let products = await response1.json();
+    let products2 = await response2.json();
 
-    }
+    res.render("pages/index", { title: "Home", products, products2 })
+
+  }
 }
 
-module.exports = indexController
+module.exports = indexController;

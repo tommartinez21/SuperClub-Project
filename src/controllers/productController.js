@@ -11,6 +11,7 @@ const existProduct = async (idProduct) => {
 
 const productController = {
   getProduct: async (req, res) => {
+    req.session.previousUrl = req.originalUrl;
     const idProducto = req.params.id;
     if (await existProduct(idProducto)) {
       try {
