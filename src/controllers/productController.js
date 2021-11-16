@@ -24,6 +24,7 @@ const productController = {
           title: `Producto ${idProducto}`,
           producto: dataProducto,
           related: dataRelated,
+          session: req.session,
         });
       } catch {
         console.error("error");

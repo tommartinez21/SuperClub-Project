@@ -5,12 +5,12 @@ const bcrypt = require("bcryptjs");
 const actions = {
   getUser: (email) => {
     let users = JSON.parse(fs.readFileSync("models/users.json", "utf-8"));
-    let user = users.find((user) => user.email == email);
+    let user = users.find((user) => user.emailUsuario == email);
     return user;
   },
 
   validatePass: (user, password) => {
-    return bcrypt.compareSync(password, user.password);
+    return bcrypt.compareSync(password, user.contraseñaUsuario);
   },
 };
 
