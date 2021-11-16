@@ -23,7 +23,7 @@ const loginController = {
     if (errors.isEmpty()) {
       user = actions.getUser(req.body.email);
       req.session.user = user;
-      if (req.session.previousUrl == "/register") {
+      if (!req.session.previousUrl || req.session.previousUrl == "/register") {
         res.redirect("/");
       } else {
         res.redirect(req.session.previousUrl);
