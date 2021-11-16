@@ -8,6 +8,9 @@
                 <div class="cuerpo-rojo"></div>
                 <div class="div-form">
                     <div class="div-adentro">
+                        <% if(locals.usuarioRegistrado){%>
+                            <p><%=usuarioRegistrado%></p>
+                            <% } %>
                         <h2>¡Hola!</h2>
                         <form method="get" action="/" class="formulario">
                             <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Tu nombre de usuario">
