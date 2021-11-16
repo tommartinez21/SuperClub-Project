@@ -1,47 +1,49 @@
 <%# agregar includes include('pages/partials/back') %>
-    <!DOCTYPE html>
-    <html lang="en">
-    <%- include('../partials/head') %>
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
 
-        <body>
-            <%- include('../partials/header') %>
-                <main>
-                    <%- include('../partials/back', {categoria:producto.categoria}) %>
-                        <div class="page-product-cardinfo">
-                            <div class="page-product-galery">
-                                <% (producto.imgs).forEach(img => { %>
-                                    <div class="galery-item">
-                                        <img src="<%= /imgs/+img %> " alt="<%= producto.title %> " />
-                                    </div>
-                                    <% }) %>
-                            </div>
+  <body>
+    <%- include('../partials/header') %>
+    <main>
+      <%- include('../partials/back', {categoria:producto.categoria}) %>
+      <div class="page-product-cardinfo">
+        <div class="page-product-galery">
+          <% (producto.imgs).forEach(img => { %>
+          <div class="galery-item">
+            <img src="<%= /imgs/+img %> " alt="<%= producto.title %> " />
+          </div>
+          <% }) %>
+        </div>
 
-                            <div class="page-product-image">
-                                <img src="<%= /imgs/+producto.imgs[0] %> " alt="<%= producto.title %> " />
-                            </div>
-                            <div class="page-product-info">
-                                <h3 class="page-product-title">
-                                    <%=producto.title%>
-                                </h3>
-                                <div class="page-product-valor">
-                                    <strong class="puntos"><%=producto.price%> </strong>
-                                    <p>PUNTOS<br />SUPERCLUB</p>
-                                </div>
-                                <button class="btn-carrito">Agregar al Carrito</button>
-                                <div class="page-product-description">
-                                    <% (producto.descripcion).forEach(parrafo => { %>
-                                        <p>
-                                            <%= parrafo %>
-                                        </p>
-                                        <% }) %>
-                                </div>
-                            </div>
-                        </div>
-                        <%- include("../partials/tepuedeinteresar") %>
-                            <%-
+        <div class="page-product-image">
+          <img
+            src="<%= /imgs/+producto.imgs[0] %> "
+            alt="<%= producto.title %> "
+          />
+        </div>
+        <div class="page-product-info">
+          <h3 class="page-product-title"><%=producto.title%></h3>
+          <div class="page-product-valor">
+            <strong class="puntos"><%=producto.price%> </strong>
+            <p>PUNTOS<br />SUPERCLUB</p>
+          </div>
+          <form action="/product/addToCart" method="get">
+            <input type="text" name="id" hidden value=<%=producto.id%>>
+            <button name="agregar" class="btn-carrito">
+              Agregar al Carrito
+            </button>
+          </form>
+          <div class="page-product-description">
+            <% (producto.descripcion).forEach(parrafo => { %>
+            <p><%= parrafo %></p>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+      <%- include("../partials/tepuedeinteresar") %> <%-
       include("../partials/navcat") %>
-                </main>
-                <%- include('../partials/footer') %>
-        </body>
-
-    </html>
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
+</html>

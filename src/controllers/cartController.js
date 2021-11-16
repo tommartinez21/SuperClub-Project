@@ -20,14 +20,14 @@ const cartController = {
     }
 
     if (!req.session.user) {
-        console.error("No hay productos en el carrito");
-        res.redirect("/login");
-      }
+      console.error("El usuario no está logeado");
+      res.redirect("/login");
+    }
 
     let productsInCart = [];
     fetch("http://dhfakestore.herokuapp.com/api/products")
       .then((res) => res.json())
-      .then((data, res) => {
+      .then((data) => {
         userLogged.cart.forEach((product) => {
           let productFromApi = data.find(
             (element) => element._id === product.id
@@ -40,10 +40,10 @@ const cartController = {
       .then((productsInCart) => {
         let productos = productsInCart;
         res.render("pages/cart", {
-            productos,
-            preciofinal,
-            title: "Carrito",
-            session: req.session,
+          productos,
+          preciofinal,
+          title: "Carrito",
+          session: req.session,
         });
       })
       .catch((err) => {
