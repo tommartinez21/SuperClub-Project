@@ -6,7 +6,6 @@ const errorController = {
     try {
       let resProductos = await fetch(`${urlBase}`);
       let products = await resProductos.json();
-      console.log(products);
       res.render("pages/error", { title: "404 !", productos: products });
     } catch {
       console.error("error");

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('../partials/head')%>
-
     <body>
         <%- include('../partials/header-logo')%>
             <main>
@@ -9,10 +8,13 @@
                 <div class="div-form">
                     <div class="div-adentro">
                         <h2>¡Registrate!</h2>
-                        <form method="get" action="/" class="formulario">
-                            <input type="email" name="emailUsuario" id="emailUsuario" placeholder="Tu email">
-                            <input type="password" name="contraseñaUsuario" id="contraseñaUsuario" placeholder="Tu nueva contraseña">
-                            <input type="password" name="contraseñaUsuarioRepetida" id="contraseñaUsuarioRepetida" placeholder="Repite tu contraseña">
+                        <% if (locals.errors) { errors.forEach(element => { %>
+                            <p><%= element.msg %></p>
+                            <% }) %> <% } %>                  
+                        <form method="POST" action="/register" class="formulario">
+                            <input type="email" name="emailUsuario" id="emailUsuario" placeholder="Tu email" value = "<%= locals.old && old.emailUsuario ? old.emailUsuario : "" %>">
+                            <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Tu nombre de usuario" value = "<%= locals.old && old.nombreUsuario ? old.nombreUsuario : "" %>">
+                            <input type="password" name="contraseñaUsuario" id="contraseñaUsuario" placeholder="Tu contraseña">
                             <button>Crear Cuenta</button>
                         </form>
                     </div>
