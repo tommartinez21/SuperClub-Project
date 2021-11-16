@@ -1,5 +1,6 @@
-const { validationResult } = require("express-validator");
 const fs = require("fs");
+const { validationResult } = require("express-validator");
+const bcrypt = require("bcryptjs");
 
 const actions = {
   getUser: (email) => {
@@ -9,7 +10,7 @@ const actions = {
   },
 
   validatePass: (user, password) => {
-    return user.password == password;
+    return bcrypt.compareSync(password, user.password);
   },
 };
 
