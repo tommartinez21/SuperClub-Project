@@ -5,6 +5,7 @@ const cartRoutes = require("./routes/cart");
 const productRoutes = require("./routes/product");
 const checkoutRoutes = require("./routes/checkout");
 const indexRoutes = require("./routes/index");
+const errorRoutes = require("./routes/error");
 
 const app = express();
 console.clear();
@@ -34,8 +35,6 @@ app.use("/cart", cartRoutes);
 
 app.use("/product", productRoutes);
 
-app.get("*", (req, res) =>
-  res.status(404).render("pages/error", { title: "404 !" })
-);
+app.use("*", errorRoutes);
 
 app.listen(3000, () => console.log("toy ready"));
