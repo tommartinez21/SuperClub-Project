@@ -1,7 +1,7 @@
 const checkoutController = {
-    renderCheckout(req, res) {
-        res.render("pages/checkout", { title: "Pago" })
-    }
-}
+  renderCheckout(req, res) {
+    res.status(501).render("pages/error", { title: "501!" });
+  },
+};
 
-module.exports = checkoutController
+module.exports = checkoutController;
