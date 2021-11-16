@@ -5,8 +5,6 @@
     padding: 8px;
     background-color: #fff;
     border: 1px solid lightgray;
-    margin-bottom: 20px;
-    overflow: hidden;
     animation-iteration-count: infinite;
     animation-duration: 0.7s;
     animation-timing-function: linear;
@@ -81,6 +79,7 @@
     color: black;
     height: 350px;
     display: block;
+    margin-bottom: 20px;
 }
 
 @media (max-width:1024px) {
