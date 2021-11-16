@@ -1,64 +1,18 @@
 [
   {
     "id": 1,
-    "nombreUsuario": "hola",
-    "emailUsuario": "hola@hotmail.com",
-    "contraseñaUsuario": "$2a$10$yMIiQqSiom5XAcsZWayqr.YM4D6J8PXqTvTGb5smydCofhJ.5nTxq"
-  },
-  {
-    "id": 2,
-    "nombreUsuario": "holasol",
-    "emailUsuario": "sol.mansilla10@gmail.com",
-    "contraseñaUsuario": "$2a$10$pi6/gO5a8GDz/0PuNswEdOML6xvuaaetfYdDUYuWgtVxvcdV9sJX2"
-  },
-  {
-    "id": 3,
-    "nombreUsuario": "kevin",
-    "emailUsuario": "kevin@gmail.com",
-    "contraseñaUsuario": "$2a$10$yJbMx1xVaKf4O3U0suqhF.hOhW9qB91swMiHr/CMzdvzYYcmfNZgm"
-  },
-  {
-    "id": 4,
-    "nombreUsuario": "nico",
-    "emailUsuario": "nico@gmail.com",
-    "contraseñaUsuario": "$2a$10$YcOF6LTAey4YAeLzjJs6D.2vZmPH6Hm7DqgCrVhgbI5kJIabUXakS"
-  },
-  {
-    "id": 5,
-    "nombreUsuario": "pepito",
-    "emailUsuario": "pepito@hotmail.com",
-    "contraseñaUsuario": "$2a$10$wWXB35MT8pFlSZlR2cIsaedWmyKSjuejIxX5GYavO8Scf0h2KIvXq"
-  },
-  {
-    "id": 6,
-    "nombreUsuario": "iona",
-    "emailUsuario": "iona@hotmail.com",
-    "contraseñaUsuario": "$2a$10$/rh5wHXzjHnB75zPq56qY.N/liIcJFba8LFy0MyARb4XnlYesnj6."
-  },
-  {
-    "id": 7,
     "nombreUsuario": "tomito",
-    "emailUsuario": "tomas@gmail.com",
-    "contraseñaUsuario": "$2a$10$S6xGhTbYewg8OLsmnuyyeO8XkddnIEKoGR3n3x8OIOJ2Sp8CAJuXK"
-  },
-  {
-    "id": 8,
-    "nombreUsuario": "tomito21",
     "emailUsuario": "tomito@gmail.com",
-    "contraseñaUsuario": "$2a$10$At2mWnkCuIm6JjXqzYZ7K.fG.r4IxXMyS02G7YVWLh.fYMERZ78R6"
-  },
-  {
-    "id": 9,
-    "nombreUsuario": "kevin",
-    "emailUsuario": "kevin@sdfsadf.com",
-    "contraseñaUsuario": "$2a$10$GMBVmNpCOukS4EHouxOjAuN17P5OlCF/epktOXx6V9ArYbVno4mG6",
-    "cart": []
-  },
-  {
-    "id": 10,
-    "nombreUsuario": "nico",
-    "emailUsuario": "nico@gmail.es",
-    "contraseñaUsuario": "$2a$10$UB5HNbPA53zMoFT0XxtUl..MsLFlhUDi538e8CbHEA6MQkKAjrGYC",
-    "cart": []
+    "contraseñaUsuario": "$2a$10$MQVGJ6RHiWJJAJf36GIkMu04rpbm2QqbnrIIbNRcBOSX2xYv7E4FO",
+    "cart": [
+      {
+        "id": "6191cb73c654f145d4326b87",
+        "cantidad": 1
+      },
+      {
+        "id": "6191cb73c654f145d4326b87",
+        "cantidad": 1
+      }
+    ]
   }
 ]

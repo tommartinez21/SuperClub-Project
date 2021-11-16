@@ -23,8 +23,6 @@ const registerController = {
     else {
       let users = JSON.parse(fs.readFileSync("models/users.json", "utf-8"));
 
-      console.log(users);
-
       let ids = users.map((x) => x.id);
       let idMax = users.length == 0 ? 0 : Math.max(...ids);
 

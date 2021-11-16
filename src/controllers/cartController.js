@@ -5,15 +5,15 @@ let preciofinal = 0;
 
 const cartController = {
   renderCart(req, res) {
-    let idUser = req.session.user.id;
-    let userLogged = users.find((usuario) => usuario.id === idUser);
-    console.log(userLogged);
-
-    req.session.previousUrl = req.originalUrl;
     if (!req.session.user) {
       console.error("El usuario no está logeado");
       res.redirect("/login");
     }
+    let idUser = req.session.user.id;
+    let userLogged = users.find((usuario) => usuario.id === idUser);
+
+    req.session.previousUrl = req.originalUrl;
+    
 
     let productsInCart = [];
     fetch("http://dhfakestore.herokuapp.com/api/products")
