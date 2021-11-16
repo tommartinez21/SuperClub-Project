@@ -1,8 +1,10 @@
 <div class="tepuedeinteresar cont-products-items">
     <h3>Te puede interesar</h3>
     <div>
-        <% for (let i=0;i<4;i++){ %>
-            <%- include("product-item") %>
-                <% } %>
+        <% products.forEach((product, i) => { %>
+            <% if (i < 5) { %>
+                <%- include("product-item", {product}) %>
+            <% } %>
+        <% }); %>
     </div>
 </div>
