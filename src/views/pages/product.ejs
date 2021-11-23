@@ -7,23 +7,25 @@
     <main>
       <%- include('../partials/back', {categoria:producto.category}) %>
       <div class="page-product-cardinfo">
-        <% if (producto.gallery.length == 0) { %>
-        <div class="page-product-image">
-          <img src="<%="/imgs/image-not-found.png"%>" alt="">
-        </div>
-        <% } else { %>
         <div class="page-product-galery">
+          <div class="galery-item">
+            <img class="img-switch" src=<%= producto.image ||
+            "/imgs/image-not-found.png" %> alt="">
+          </div>
           <% (producto.gallery).forEach(img => { %>
           <div class="galery-item">
-            <img src="<%= img %> " alt="<%= producto.title %> " />
+            <img
+              class="img-switch"
+              src="<%= img %> "
+              alt="<%= producto.title %> "
+            />
           </div>
-
           <% }) %>
         </div>
         <div class="page-product-image">
-          <img src="<%= producto.image %> " alt="<%= producto.title %> " />
+          <img id="image-product" src=<%= producto.image ||
+          "/imgs/image-not-found.png" %> alt="">
         </div>
-        <% } %>
 
         <div class="page-product-info">
           <h3 class="page-product-title"><%=producto.title%></h3>
@@ -40,9 +42,7 @@
             </button>
           </form>
           <div class="page-product-description">
-            <%# (producto.description).forEach(parrafo => { %>
             <p><%= producto.description %></p>
-            <%# }) %>
           </div>
         </div>
       </div>
@@ -50,5 +50,14 @@
       include("../partials/navcat") %>
     </main>
     <%- include('../partials/footer') %>
+    <script>
+      let imagenes = document.querySelectorAll(".img-switch");
+      let selectImg = document.querySelector("#image-product");
+      imagenes.forEach((img) => {
+        img.addEventListener("click", (e) => {
+          selectImg.src = e.target.src;
+        });
+      });
+    </script>
   </body>
 </html>
