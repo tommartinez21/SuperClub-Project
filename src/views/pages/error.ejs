@@ -9,8 +9,8 @@
       <img class="error-img" src="/imgs/elsa.gif" alt="" srcset="" />
       <p class="error-mensaje">¡Ooops!</p>
       <p>Elsa no encontró tu página</p>
-      <%- include('../partials/tepuedeinteresar') %>
-      <a class="error-volver" href="/">haz click aquí para volver al inicio</a>
+      <% if (locals.productos) { %> <%- include("../partials/tepuedeinteresar",
+      {products:productos}) %> <% } %>
     </main>
 
     <%- include('../partials/footer') %>

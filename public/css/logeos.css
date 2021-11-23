@@ -64,3 +64,15 @@
   height: 250px;
   background-color: var(--red);
 }
+
+.remember-check {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #494f51;
+}
+
+.remember-check input {
+  width: auto;
+}

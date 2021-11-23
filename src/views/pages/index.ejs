@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="indexhtml">
   <%- include('../partials/head') %>
 
   <body>
@@ -40,8 +40,12 @@
       <div class="maspedidos cont-products-items">
         <h3>Más pedidos</h3>
         <div>
-          <% for (let i=0;i<8;i++){ %> <%- include("../partials/product-item")
-          %> <% } %>
+          <% products2.forEach((product, i) => { %>
+            <% if (i < 10) { %>
+                <%- include("../partials/product-item", {product})%>
+            <% } %>
+          <% }) %>
+          
         </div>
       </div>
 

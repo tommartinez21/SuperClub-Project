@@ -2,7 +2,6 @@ header {
   width: 100%;
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(4px);
-  align-items: center;
   border-bottom: solid 2px #ccc;
 }
 
@@ -18,14 +17,21 @@ header {
   padding: 20px 16px;
 }
 
+.desktop-logo {
+  display: none;
+}
+
 .search-bar {
+  display: flex;
+  flex-wrap: wrap;
   width: 50%;
+  align-items: center;
+  height: 32px;
 }
 
 .search-bar input {
-  width: 92%;
+  width: 100%;
   height: 32px;
-  flex-basis: 50%;
   border-radius: 16px;
   border: solid 2px #ccc;
   padding: 8px 16px;
@@ -34,31 +40,24 @@ header {
 }
 
 .search-bar button {
+  height: 32px;
   background-color: transparent;
   border: none;
-  flex-basis: 25%;
   font-size: 16px;
-  color: var(--grey);
+  color: rgba(0, 0, 0, 0.5);
   position: relative;
-  right: 50px;
-}
-
-.sb-big {
-  display: none;
-  width: 50%;
-}
-
-.sb-responsive {
-  width: 90%;
-  display: block;
-  margin: auto;
-  margin-bottom: 10px;
+  bottom: 32px;
+  left: 85%;
 }
 
 .header-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+.header-buttons a {
+  text-decoration: none;
 }
 
 .cart-button {
@@ -102,8 +101,8 @@ header {
   background: rgba(73, 79, 81, 1);
   border: none;
   border-radius: 16px;
-  padding: 4px 8px 4px 4px;
-  font-size: 15 px;
+  padding: 4px;
+  font-size: 15px;
   color: rgba(255, 255, 255, 1);
   display: flex;
   align-items: center;
@@ -119,4 +118,68 @@ header {
 
 .user-button:hover {
   background: rgba(236, 0, 0, 1);
+}
+
+.username-button {
+  display: none;
+}
+
+.redirect-button {
+  width: 32px;
+  height: 32px;
+  background: rgba(73, 79, 81, 1);
+  border: none;
+  border-radius: 16px;
+  padding: 4px 8px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.redirect-button img {
+  width: 24px;
+  height: 24px;
+}
+
+.redirect-button:hover {
+  background: rgba(236, 0, 0, 1);
+}
+
+.redir-text {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  .mobile-logo {
+    display: none;
+  }
+
+  .desktop-logo {
+    display: block;
+  }
+
+  .search-bar button {
+    left: 95%;
+  }
+
+  .username-button {
+    display: block;
+    padding-right: 4px;
+  }
+
+  .redirect-button {
+    width: auto;
+  }
+
+  .redir-text {
+    display: block;
+  }
+
+  .redir-icon {
+    display: none;
+  }
 }
