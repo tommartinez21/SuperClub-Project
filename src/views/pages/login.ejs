@@ -7,7 +7,7 @@
     <main>
       <div class="cuerpo-rojo"></div>
       <div class="div-form">
-        <div class="div-adentro">
+        <div class="div-adentro skin skin-card">
           <h2>¡Hola!</h2>
           <% if (locals.errors) { errors.forEach(element => { %>
           <p><%= element.msg %></p>
@@ -27,12 +27,13 @@
               <input type="checkbox" id="remember-email" />
               <label for="remember-email">Recordar email</label>
             </div>
-            <button>Iniciar Sesión</button>
+            <button class="skin skin-btn">Iniciar Sesión</button>
           </form>
         </div>
       </div>
-      <p class="texto-abajo">
-        ¿No tienes cuenta? <a class="links" href="/register">Regístrate</a>
+      <p class="texto-abajo skin skin-a">
+        ¿No tienes cuenta?
+        <a class="links" href="/register">Regístrate</a>
       </p>
     </main>
     <%- include('../partials/footer')%>
