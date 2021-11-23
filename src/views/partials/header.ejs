@@ -30,7 +30,11 @@
       <a href="/cart">
         <button class="cart-button">
           <i class="fas fa-shopping-cart"></i>
-          <div class="products-num">2</div>
+          <% let total = 0 %> <% session.user.cart.forEach(prod => { %> <% total
+          += prod.cantidad %> <% }) %> <% if (total) { %>
+
+          <div class="products-num"><%= total %></div>
+          <% } %>
         </button>
       </a>
       <button class="user-button">
