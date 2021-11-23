@@ -3,38 +3,6 @@
   <%- include('../partials/head') %>
 
   <body>
-    <script>
-      contador = 0;
-
-      const sumarContador = (id, precio) => {
-        precio = parseInt(precio);
-        const contador = document.getElementById("contador" + id);
-        const puntos = document.getElementById("puntos" + id);
-        const precioTotal = document.getElementById("precioTotal");
-        contador.innerHTML = parseInt(contador.innerHTML) + 1;
-        let precioSumado = parseInt(puntos.innerHTML.replace(".", "")) + precio;
-        puntos.innerHTML = new Intl.NumberFormat().format(precioSumado);
-        let puntosTotales =
-          parseInt(precioTotal.innerHTML.replace(".", "")) + precio;
-        precioTotal.innerHTML = new Intl.NumberFormat().format(puntosTotales);
-      };
-
-      const restarContador = (id, precio) => {
-        precio = parseInt(precio);
-        const contador = document.getElementById("contador" + id);
-        const puntos = document.getElementById("puntos" + id);
-        const precioTotal = document.getElementById("precioTotal");
-        if (contador.innerHTML > 0) {
-          contador.innerHTML = parseInt(contador.innerHTML) - 1;
-          let precioRestado =
-            parseInt(puntos.innerHTML.replace(".", "")) - precio;
-          puntos.innerHTML = new Intl.NumberFormat().format(precioRestado);
-          let puntosTotales =
-            parseInt(precioTotal.innerHTML.replace(".", "")) - precio;
-          precioTotal.innerHTML = new Intl.NumberFormat().format(puntosTotales);
-        }
-      };
-    </script>
     <%- include('../partials/header') %>
 
     <main>
@@ -95,11 +63,52 @@
           />
         </div>
         <div class="button-pagar">
-          <a class="boton" href="/checkout">Ir a Pagar</a>
+          <a class="boton" id="pay-button">Ir a Pagar</a>
         </div>
       </div>
     </main>
 
     <%- include('../partials/footer') %>
+
+    <script>
+      contador = 0;
+
+      const sumarContador = (id, precio) => {
+        precio = parseInt(precio);
+        const contador = document.getElementById("contador" + id);
+        const puntos = document.getElementById("puntos" + id);
+        const precioTotal = document.getElementById("precioTotal");
+        contador.innerHTML = parseInt(contador.innerHTML) + 1;
+        let precioSumado = parseInt(puntos.innerHTML.replace(".", "")) + precio;
+        puntos.innerHTML = new Intl.NumberFormat().format(precioSumado);
+        let puntosTotales =
+          parseInt(precioTotal.innerHTML.replace(".", "")) + precio;
+        precioTotal.innerHTML = new Intl.NumberFormat().format(puntosTotales);
+      };
+
+      const restarContador = (id, precio) => {
+        precio = parseInt(precio);
+        const contador = document.getElementById("contador" + id);
+        const puntos = document.getElementById("puntos" + id);
+        const precioTotal = document.getElementById("precioTotal");
+        if (contador.innerHTML > 0) {
+          contador.innerHTML = parseInt(contador.innerHTML) - 1;
+          let precioRestado =
+            parseInt(puntos.innerHTML.replace(".", "")) - precio;
+          puntos.innerHTML = new Intl.NumberFormat().format(precioRestado);
+          let puntosTotales =
+            parseInt(precioTotal.innerHTML.replace(".", "")) - precio;
+          precioTotal.innerHTML = new Intl.NumberFormat().format(puntosTotales);
+        }
+      };
+
+      const botonPagar = document.querySelector("#pay-button")
+      botonPagar.addEventListener("click", () => preventCheckout())
+
+      const preventCheckout = () => {
+        alert("Esta página aún no ha sido implementada. Disculpe las molestias.")
+      }
+    </script>
+
   </body>
 </html>
