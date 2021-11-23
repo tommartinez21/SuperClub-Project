@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+
+  <body>
+    <%- include('../partials/header-logo') %>
+
+    <main class="error-container">
+      <img class="error-img" src="/imgs/elsa.gif" alt="" srcset="" />
+      <p class="error-mensaje">¡Ooops!</p>
+      <p>Elsa no encontró tu página</p>
+      <% if (locals.productos) { %> <%- include("../partials/tepuedeinteresar",
+      {products:productos}) %> <% } %>
+    </main>
+
+    <%- include('../partials/footer') %>
+  </body>
+</html>

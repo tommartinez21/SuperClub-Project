@@ -13,7 +13,6 @@ footer {
 
 .footer-responsive {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -22,22 +21,14 @@ footer i {
   font-size: 20px;
 }
 
-.footer-responsive > * {
-  padding: 4px 0;
-}
-
-.social-media {
+.social-networks {
   display: flex;
   gap: 23px;
 }
 
-.social-media a {
+.social-networks a {
   color: #999;
   text-decoration: none;
-}
-
-.copyright {
-  order: -1;
 }
 
 .apps {
@@ -53,12 +44,13 @@ footer i {
   text-decoration: none;
 }
 
-@media (min-width: 800px) {
-  .footer-responsive {
-    flex-direction: row;
-  }
+.copyright-down {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
 
-  .copyright {
-    order: 0;
-  }
+.copyright-up {
+  display: none;
+  width: 25%;
 }
