@@ -14,5 +14,17 @@
         "cantidad": 1
       }
     ]
+  },
+  {
+    "id": 2,
+    "nombreUsuario": "nico",
+    "emailUsuario": "n@asd.com",
+    "contraseñaUsuario": "$2a$10$gvJjXTzJ3iLxcClbk0c4E.J7Ze0veIv0r1HWoX5rqUip06KeySx.S",
+    "cart": [
+      {
+        "id": "6191cb73c654f145d4326b87",
+        "cantidad": 1
+      }
+    ]
   }
 ]
