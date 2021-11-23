@@ -1,0 +1,31 @@
+body {
+  background-color: var(--black-body);
+  color: var(--white);
+}
+
+.skin.skin-header {
+  background-color: rgb(0, 0, 0, 0.25);
+  border-bottom: none;
+}
+
+.skin.search-bar input {
+  background-color: var(--grey);
+}
+
+.skin.search-bar button {
+  color: rgb(255 255 255 / 25%);
+}
+
+.skin.skin-card {
+  background-color: var(--grey);
+  color: var(--white);
+  border: none;
+}
+
+.skin.skin-btn {
+  background-color: var(--black);
+}
+
+.skin.skin-a a {
+  color: white;
+}

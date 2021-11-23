@@ -6,7 +6,8 @@
     <%- include('../partials/header') %>
     <main>
       <%- include('../partials/back', {categoria:producto.category}) %>
-      <div class="page-product-cardinfo">
+      <div class="page-product-cardinfo skin skin-card">
+        <h3 class="page-product-title mobile"><%=producto.title%></h3>
         <div class="page-product-galery">
           <div class="galery-item">
             <img class="img-switch" src=<%= producto.image ||
@@ -28,7 +29,7 @@
         </div>
 
         <div class="page-product-info">
-          <h3 class="page-product-title"><%=producto.title%></h3>
+          <h3 class="page-product-title desktop"><%=producto.title%></h3>
           <div class="page-product-valor">
             <strong class="puntos"
               ><%=new Intl.NumberFormat().format(producto.price)%>
@@ -37,7 +38,7 @@
           </div>
           <form action="/product/addToCart" method="get">
             <input type="text" name="id" hidden value="<%=producto._id %>" />
-            <button name="agregar" class="btn-carrito">
+            <button name="agregar" class="btn-carrito skin skin-btn">
               Agregar al Carrito
             </button>
           </form>
