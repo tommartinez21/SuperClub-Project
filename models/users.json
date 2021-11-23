@@ -32,6 +32,11 @@
     "nombreUsuario": "Juan",
     "emailUsuario": "jperez@asd.com",
     "contraseñaUsuario": "$2a$10$BwUsG3wWd02RF3Ld7Asuc.MZollxQRKtVYW5vWklIvLJnY2pYy38K",
-    "cart": []
+    "cart": [
+      {
+        "id": "6191e5a3edf22907883a08ae",
+        "cantidad": 1
+      }
+    ]
   }
 ]
