@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('../partials/head')%>
+<script src="/js/validacionRegistro.js" defer></script>
     <body>
         <%- include('../partials/header-logo')%>
             <main>
@@ -9,12 +10,15 @@
                     <div class="div-adentro">
                         <h2>¡Registrate!</h2>
                         <% if (locals.errors) { errors.forEach(element => { %>
-                            <p><%= element.msg %></p>
+                            <p><%= element.msg %></p> 
                             <% }) %> <% } %>                  
                         <form method="POST" action="/register" class="formulario">
                             <input type="email" name="emailUsuario" id="emailUsuario" placeholder="Tu email" value = "<%= locals.old && old.emailUsuario ? old.emailUsuario : "" %>">
+                            <p hidden class="errorEmail"></p>
                             <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Tu nombre de usuario" value = "<%= locals.old && old.nombreUsuario ? old.nombreUsuario : "" %>">
+                            <p hidden class="errorNombreUsuario"></p>
                             <input type="password" name="contraseñaUsuario" id="contraseñaUsuario" placeholder="Tu contraseña">
+                            <p hidden class="errorPassword"></p>
                             <button>Crear Cuenta</button>
                         </form>
                     </div>

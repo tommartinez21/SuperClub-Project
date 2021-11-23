@@ -40,5 +40,11 @@
     "nombreUsuario": "tomito",
     "emailUsuario": "tomas@gmail.com",
     "contraseñaUsuario": "$2a$10$S6xGhTbYewg8OLsmnuyyeO8XkddnIEKoGR3n3x8OIOJ2Sp8CAJuXK"
+  },
+  {
+    "id": 8,
+    "nombreUsuario": "ssadsaas",
+    "emailUsuario": "",
+    "contraseñaUsuario": "$2a$10$Rochox/flBJ5.DrYAB79nO6VXVpqGAen3THnf1vUVaJXaenV0dj12"
   }
 ]
