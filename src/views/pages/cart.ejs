@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+
+  <body>
+    <script>
+      contador = 0;
+
+      const sumarContador = (id, precio) => {
+        precio = parseInt(precio);
+        const contador = document.getElementById("contador" + id);
+        const puntos = document.getElementById("puntos" + id);
+        const precioTotal = document.getElementById("precioTotal");
+        contador.innerHTML = parseInt(contador.innerHTML) + 1;
+        let precioSumado = parseInt(puntos.innerHTML.replace(".", "")) + precio;
+        puntos.innerHTML = new Intl.NumberFormat().format(precioSumado);
+        let puntosTotales =
+          parseInt(precioTotal.innerHTML.replace(".", "")) + precio;
+        precioTotal.innerHTML = new Intl.NumberFormat().format(puntosTotales);
+      };
+
+      const restarContador = (id, precio) => {
+        precio = parseInt(precio);
+        const contador = document.getElementById("contador" + id);
+        const puntos = document.getElementById("puntos" + id);
+        const precioTotal = document.getElementById("precioTotal");
+        if (contador.innerHTML > 0) {
+          contador.innerHTML = parseInt(contador.innerHTML) - 1;
+          let precioRestado =
+            parseInt(puntos.innerHTML.replace(".", "")) - precio;
+          puntos.innerHTML = new Intl.NumberFormat().format(precioRestado);
+          let puntosTotales =
+            parseInt(precioTotal.innerHTML.replace(".", "")) - precio;
+          precioTotal.innerHTML = new Intl.NumberFormat().format(puntosTotales);
+        }
+      };
+    </script>
+    <%- include('../partials/header') %>
+
+    <main>
+      <div class="cart-container">
+        <%- include('../partials/volver') %>
+        <h3 class="categoria-cart">Productos en tu Carrito</h3>
+
+        <% if (productos) { preciofinal = 0; contador = 0;
+        productos.forEach(producto => { %>
+        <article class="cart-product-flex">
+          <div class="cart-descripcion-flex">
+            <img
+              src="<%= producto.image %>"
+              alt="<%=producto.title%>"
+              class="cart-product-img"
+            />
+            <span class="cart-product-title"><%= producto.title %></span>
+          </div>
+          <div class="cart-botones-flex">
+            <a class="boton">Quitar</a>
+            <div class="cart-contador">
+              <a
+                class="cont-operador"
+                onclick="restarContador('<%= producto._id %>', '<%= producto.price %>')"
+              >
+                -
+              </a>
+              <span id="contador<%= producto._id %>"
+                ><%= producto.cantidad %></span
+              >
+              <a
+                class="cont-operador"
+                onclick="sumarContador('<%= producto._id %>', '<%= producto.price %>')"
+              >
+                +
+              </a>
+            </div>
+            <span class="cart-puntos" id="puntos<%= producto._id %>"
+              ><%= new Intl.NumberFormat().format(producto.price *
+              producto.cantidad) %></span
+            >
+          </div>
+        </article>
+        <% preciofinal += producto.price }) } %>
+
+        <div class="cart-puntos-total">
+          <span class="cart-descripcion-final">Total de Puntos SuperClub</span>
+          <span class="cart-puntos" id="precioTotal"
+            ><%= new Intl.NumberFormat().format(preciofinal) %></span
+          >
+        </div>
+        <div class="div-cupon">
+          <input
+            type="text"
+            name="cupon"
+            id="cupon"
+            placeholder="Ingresá tu cupón de descuento"
+          />
+        </div>
+        <div class="button-pagar">
+          <a class="boton" href="/checkout">Ir a Pagar</a>
+        </div>
+      </div>
+    </main>
+
+    <%- include('../partials/footer') %>
+  </body>
+</html>

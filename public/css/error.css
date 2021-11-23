@@ -1,0 +1,19 @@
+.error-container {
+  padding-top: 5%;
+  text-align: center;
+}
+
+.error-img {
+  width: 300px;
+}
+
+.error-mensaje {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.error-volver {
+  font-size: 20px;
+  text-decoration: none;
+  color: red;
+}

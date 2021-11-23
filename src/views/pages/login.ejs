@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head')%>
+
+  <body>
+    <%- include('../partials/header-logo')%>
+    <main>
+      <div class="cuerpo-rojo"></div>
+      <div class="div-form">
+        <div class="div-adentro">
+          <h2>¡Hola!</h2>
+          <% if (locals.errors) { errors.forEach(element => { %>
+          <p><%= element.msg %></p>
+          <% }) %> <% } %> <% if(locals.usuarioRegistrado){%>
+          <p><%=usuarioRegistrado%></p>
+          <% } %>
+          <form method="post" action="/login" class="formulario">
+            <input type="text" name="email" id="email" placeholder="Tu email"
+            value="<%= locals.old ? old.email : "" %>" />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Tu contraseña"
+            />
+            <button>Iniciar Sesión</button>
+          </form>
+        </div>
+      </div>
+      <p class="texto-abajo">
+        ¿No tienes cuenta? <a class="links" href="/register">Regístrate</a>
+      </p>
+    </main>
+    <%- include('../partials/footer')%>
+  </body>
+</html>
