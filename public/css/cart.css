@@ -131,7 +131,7 @@
         padding-top: 3px;
     }
     .boton {
-        padding: 0.4rem 0.8rem;
+        padding: 0.4rem 1.1rem;
     }
 }
 
@@ -146,7 +146,7 @@
         min-width: 360px;
     }
     .boton {
-        padding: 0.4rem 0.5rem;
+        padding: 0.4rem 1rem;
         transition: padding 0ms;
     }
 }
@@ -162,6 +162,17 @@
     }
     .cart-botones-flex {
         position: relative;
-        right: 0px;
+        right: -32px;
+    }
+    .cart-puntos-total {
+        padding-right: 0rem;
+    }
+    .div-cupon {
+        right: -108px;
+        width: 220px;
+    }
+    .button-pagar {
+        position: relative;
+        right: -20px;
     }
 }
