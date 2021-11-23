@@ -1,0 +1,43 @@
+<header>
+  <div class="header-flex">
+    <a href="/"
+      ><img src="/imgs/santanderLogo.svg" alt="Logo Santander" width="136"
+    /></a>
+
+    <form class="search-bar sb-big" action="/" method="get">
+      <input
+        type="text"
+        name="search"
+        id=""
+        placeholder="Buscar productos..."
+      />
+      <button><i class="fas fa-search"></i></button>
+    </form>
+
+    <div class="header-buttons">
+      <% if (session.user) { %>
+      <a href="/cart">
+        <button class="cart-button">
+          <i class="fas fa-shopping-cart"></i>
+          <div class="products-num">2</div>
+        </button>
+      </a>
+      <button class="user-button">
+        <img src="/imgs/perfil.png" alt="Imagen de perfil" /> <%=
+        session.user.nombreUsuario %>
+      </button>
+      <% } else { %>
+      <a href="/login">
+        <button class="redirect-button">Iniciar sesión</button>
+      </a>
+      <a href="/register">
+        <button class="redirect-button">Registrarse</button>
+      </a>
+      <% } %>
+    </div>
+  </div>
+  <form class="search-bar sb-responsive" action="/" method="get">
+    <input type="text" name="search" id="" placeholder="Buscar productos..." />
+    <button><i class="fas fa-search"></i></button>
+  </form>
+</header>

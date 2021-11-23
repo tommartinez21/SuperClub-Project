@@ -1,0 +1,53 @@
+<%# agregar includes include('pages/partials/back') %>
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+
+  <body>
+    <%- include('../partials/header') %>
+    <main>
+      <%- include('../partials/back', {categoria:producto.category}) %>
+      <div class="page-product-cardinfo">
+        <% if (producto.gallery.length == 0) { %>
+        <div class="page-product-image">
+          <%- include('../partials/image-not-found') %>
+        </div>
+        <% } else { %>
+        <div class="page-product-galery">
+          <% (producto.gallery).forEach(img => { %>
+          <div class="galery-item">
+            <img src="<%= img %> " alt="<%= producto.title %> " />
+          </div>
+
+          <% }) %>
+        </div>
+        <div class="page-product-image">
+          <img src="<%= producto.image %> " alt="<%= producto.title %> " />
+        </div>
+        <% } %>
+
+        <div class="page-product-info">
+          <h3 class="page-product-title"><%=producto.title%></h3>
+          <div class="page-product-valor">
+            <strong class="puntos"><%=producto.price%> </strong>
+            <p>PUNTOS<br />SUPERCLUB</p>
+          </div>
+          <form action="/product/addToCart" method="get">
+            <input type="text" name="id" hidden value=<%= producto._id %> />
+            <button name="agregar" class="btn-carrito">
+              Agregar al Carrito
+            </button>
+          </form>
+          <div class="page-product-description">
+            <%# (producto.description).forEach(parrafo => { %>
+            <p><%= producto.description %></p>
+            <%# }) %>
+          </div>
+        </div>
+      </div>
+      <%- include("../partials/tepuedeinteresar", {products:related}) %> <%-
+      include("../partials/navcat") %>
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
+</html>
