@@ -9,14 +9,14 @@
       <div class="div-form">
         <div class="div-adentro skin skin-card">
           <h2>¡Hola!</h2>
-          <% if (locals.errors) { errors.forEach(element => { %>
-          <p><%= element.msg %></p>
-          <% }) %> <% } %> <% if(locals.usuarioRegistrado){%>
-          <p><%=usuarioRegistrado%></p>
-          <% } %>
+
           <form method="post" action="/login" class="formulario">
-            <input type="text" name="email" id="email" placeholder="Tu email"
-            value="<%= locals.old ? old.email : "" %>" />
+            <% if (locals.errors) { errors.forEach(element => { %>
+            <p><%= element.msg %></p>
+            <% }) %> <% } %> <% if(locals.usuarioRegistrado){%>
+            <p><%=usuarioRegistrado%></p>
+            <% } %> <input type="text" placeholder="Tu email" name="email"
+            id="email" value="<%= locals.old ? old.email : "" %>" />
             <input
               type="password"
               name="password"
