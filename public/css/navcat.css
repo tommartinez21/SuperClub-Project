@@ -51,7 +51,18 @@
 
 @media (max-width:1024px) {
     .nav {
-        display: none;
         flex-direction: column;
+        height: auto;
+        width: 90%;
+    }
+    .cont-icons-bar {
+        flex-direction: row;
+        justify-content: left;
+    }
+    .cont-icons-bar::after {
+        display: none;
+    }
+    .cont-icons-bar > div {
+        margin-right: 10px;
     }
 }

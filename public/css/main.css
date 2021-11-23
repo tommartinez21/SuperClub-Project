@@ -13,6 +13,7 @@
     font-family: "Open Sans", sans-serif;
 }
 
+
 body {
     background-color: var(--lightgrey);
     min-height: 100vh;
@@ -97,7 +98,7 @@ main {
 
 .products-heroes span {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.25em;
 }
 
 .textos-brand {
@@ -155,6 +156,7 @@ main {
 @media (max-width:525px) {
     .cont-products-items>div {
         grid-template-columns: 1fr;
+        
     }
 }
 
