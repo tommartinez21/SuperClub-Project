@@ -2,14 +2,6 @@
 }
 
 @media (min-width: 724px) {
-  .copyright-up {
-    display: block;
-  }
-
-  .copyright-down {
-    display: none;
-  }
-
   .mobile-logo {
     display: none;
   }
@@ -37,5 +29,13 @@
 
   .redir-icon {
     display: none;
+  }
+
+  .footer-responsive {
+    flex-direction: row;
+  }
+
+  .copyright {
+    order: 0;
   }
 }

@@ -13,6 +13,7 @@ footer {
 
 .footer-responsive {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -21,14 +22,22 @@ footer i {
   font-size: 20px;
 }
 
-.social-networks {
+.footer-responsive > * {
+  padding: 4px 0;
+}
+
+.social-media {
   display: flex;
   gap: 23px;
 }
 
-.social-networks a {
+.social-media a {
   color: #999;
   text-decoration: none;
+}
+
+.copyright {
+  order: -1;
 }
 
 .apps {
@@ -42,15 +51,4 @@ footer i {
   gap: 8px;
   color: #999;
   text-decoration: none;
-}
-
-.copyright-down {
-  display: block;
-  margin: auto;
-  width: 50%;
-}
-
-.copyright-up {
-  display: none;
-  width: 25%;
 }
