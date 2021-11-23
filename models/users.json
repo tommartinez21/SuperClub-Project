@@ -14,5 +14,12 @@
         "cantidad": 1
       }
     ]
+  },
+  {
+    "id": 2,
+    "nombreUsuario": "Juan",
+    "emailUsuario": "jperez@asd.com",
+    "contraseñaUsuario": "$2a$10$BwUsG3wWd02RF3Ld7Asuc.MZollxQRKtVYW5vWklIvLJnY2pYy38K",
+    "cart": []
   }
 ]
