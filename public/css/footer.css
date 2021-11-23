@@ -52,3 +52,13 @@ footer i {
   color: #999;
   text-decoration: none;
 }
+
+@media (min-width: 800px) {
+  .footer-responsive {
+    flex-direction: row;
+  }
+
+  .copyright {
+    order: 0;
+  }
+}

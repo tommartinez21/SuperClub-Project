@@ -152,3 +152,34 @@ header {
 .redir-text {
   display: none;
 }
+
+@media (min-width: 800px) {
+  .mobile-logo {
+    display: none;
+  }
+
+  .desktop-logo {
+    display: block;
+  }
+
+  .search-bar button {
+    left: 95%;
+  }
+
+  .username-button {
+    display: block;
+    padding-right: 4px;
+  }
+
+  .redirect-button {
+    width: auto;
+  }
+
+  .redir-text {
+    display: block;
+  }
+
+  .redir-icon {
+    display: none;
+  }
+}
