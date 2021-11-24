@@ -18,7 +18,6 @@ const validations = [
       let user = actions.getUser(req.body.email);
       if (!user) {
         throw new Error("El email no tiene usuario registrado");
-
       }
       if (!actions.validatePass(user, value)) {
         throw new Error("La contraseña es incorrecta");
@@ -30,5 +29,7 @@ const validations = [
 router.get("/", loginController.renderLogin);
 
 router.post("/", validations, loginController.postLogin);
+
+router.delete("/", loginController.logout);
 
 module.exports = router;
