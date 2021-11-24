@@ -25,6 +25,6 @@ check("nombreUsuario")
 check("contraseñaUsuario")
 .notEmpty().withMessage("Debe completar contraseña")
 .bail()
-.isLength({min:8}).withMessage("La contraseña tiene que tener como mínimo 8 caracteres")] ,registerController.processRegister);
+.isLength({min:8}).withMessage("La contraseña tiene que tener como mínimo 8 caracteres")],registerController.processRegister);
 
 module.exports = router

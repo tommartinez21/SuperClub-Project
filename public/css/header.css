@@ -20,41 +20,37 @@ header {
     padding: 20px 16px;
 }
 
+.desktop-logo {
+  display: none;
+}
+
 .search-bar {
-    width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  align-items: center;
+  height: 32px;
 }
 
 .search-bar input {
-    width: 92%;
-    height: 32px;
-    flex-basis: 50%;
-    border-radius: 16px;
-    border: solid 2px #ccc;
-    padding: 8px 16px;
-    color: rgba(0, 0, 0, 1);
-    background: rgba(255, 255, 255, 1);
+  width: 100%;
+  height: 32px;
+  border-radius: 16px;
+  border: solid 1px #ccc;
+  padding: 8px 16px;
+  color: rgba(0, 0, 0, 1);
+  background: rgba(255, 255, 255, 1);
 }
 
 .search-bar button {
-    background-color: transparent;
-    border: none;
-    flex-basis: 25%;
-    font-size: 16px;
-    color: var(--grey);
-    position: relative;
-    right: 50px;
-}
-
-.sb-big {
-    display: none;
-    width: 50%;
-}
-
-.sb-responsive {
-    width: 90%;
-    display: block;
-    margin: auto;
-    margin-bottom: 10px;
+  height: 32px;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  bottom: 32px;
+  left: 85%;
 }
 
 .header-buttons {
@@ -101,19 +97,19 @@ header {
 }
 
 .user-button {
-    width: auto;
-    height: 32px;
-    background: rgba(73, 79, 81, 1);
-    border: none;
-    border-radius: 16px;
-    padding: 4px 8px 4px 4px;
-    font-size: 15 px;
-    color: rgba(255, 255, 255, 1);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 4px;
-    cursor: pointer;
+  width: auto;
+  height: 32px;
+  background: rgba(73, 79, 81, 1);
+  border: none;
+  border-radius: 16px;
+  padding: 4px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  cursor: pointer;
 }
 
 .user-button img {
@@ -125,20 +121,24 @@ header {
     background: rgba(236, 0, 0, 1);
 }
 
+.username-button {
+  display: none;
+}
+
 .redirect-button {
-    width: auto;
-    height: 32px;
-    background: rgba(73, 79, 81, 1);
-    border: none;
-    border-radius: 16px;
-    padding: 4px 8px;
-    font-size: 15 px;
-    color: rgba(255, 255, 255, 1);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 4px;
-    cursor: pointer;
+  width: 32px;
+  height: 32px;
+  background: rgba(73, 79, 81, 1);
+  border: none;
+  border-radius: 16px;
+  padding: 4px 8px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  cursor: pointer;
 }
 
 .redirect-button img {
@@ -150,6 +150,40 @@ header {
     background: rgba(236, 0, 0, 1);
 }
 
+.redir-text {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  .mobile-logo {
+    display: none;
+  }
+
+  .desktop-logo {
+    display: block;
+  }
+
+  .search-bar button {
+    left: 95%;
+  }
+
+  .username-button {
+    display: block;
+    padding-right: 4px;
+  }
+
+  .redirect-button {
+    width: auto;
+  }
+
+  .redir-text {
+    display: block;
+  }
+
+  .redir-icon {
+    display: none;
+  }
+}
 @media (min-width: 1072px) {
     .header-buttons {
         position: relative;

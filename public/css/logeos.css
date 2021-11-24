@@ -34,7 +34,7 @@
   margin: 3%;
   width: 100%;
   border-radius: 20px;
-  border: solid 2px #ccc;
+  border: solid 1px #ccc;
 }
 
 .div-form button {
@@ -46,6 +46,17 @@
   background-color: #494f51;
   color: white;
   border: none;
+  transition: 250ms ease-out;
+}
+
+.div-form button:hover {
+  background-color: red;
+  color: white;
+}
+
+.div-form button:disabled {
+  background-color: rgb(151, 151, 151);
+  color: lightgray;
 }
 
 .texto-abajo {
@@ -63,4 +74,29 @@
 .cuerpo-rojo {
   height: 250px;
   background-color: var(--red);
+}
+
+.remember-check {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #494f51;
+}
+
+.remember-check input {
+  width: auto;
+}
+
+#modalLogin {
+  width: 30%;
+  height: 30%;
+  z-index: 10;
+  position: absolute;
+  top: 30%;
+  left: 35%;
+}
+
+.texto-modal {
+  text-align: center;
 }

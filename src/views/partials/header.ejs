@@ -1,10 +1,21 @@
-<header>
+<header class="skin">
   <div class="header-flex">
-    <a href="/"
-      ><img src="/imgs/santanderLogo.svg" alt="Logo Santander" width="136"
-    /></a>
+    <a href="/">
+      <img
+        src="/imgs/santanderLogo.svg"
+        alt="Logo Santander"
+        width="136"
+        class="desktop-logo"
+      />
+      <img
+        src="/imgs/santanderIso.svg"
+        alt="Logo Santander"
+        width="30"
+        class="mobile-logo"
+      />
+    </a>
 
-    <form class="search-bar sb-big" action="/" method="get">
+    <form class="skin search-bar" action="/" method="get">
       <input
         type="text"
         name="search"
@@ -19,27 +30,33 @@
       <a href="/cart">
         <button class="cart-button">
           <i class="fas fa-shopping-cart"></i>
-          <div class="products-num">2</div>
+          <% let total = 0 %> <% session.user.cart.forEach(prod => { %> <% total
+          += prod.cantidad %> <% }) %> <% if (total) { %>
+
+          <div class="products-num"><%= total %></div>
+          <% } %>
         </button>
       </a>
       <button class="user-button">
-        <img src="/imgs/perfil.png" alt="Imagen de perfil" /> <%=
-        session.user.nombreUsuario %>
+        <img src="/imgs/perfil.png" alt="Imagen de perfil" />
+        <span class="username-button"> <%= session.user.nombreUsuario %></span>
       </button>
       <% } else { %>
       <a href="/login">
-        <button class="redirect-button">Iniciar sesión</button>
+        <button class="redirect-button">
+          <i class="fas fa-sign-in-alt redir-icon"></i>
+          <span class="redir-text">Iniciar sesión</span>
+        </button>
       </a>
       <a href="/register">
-        <button class="redirect-button">Registrarse</button>
+        <button class="redirect-button">
+          <i class="fas fa-user-plus redir-icon"></i>
+          <span class="redir-text">Registrarse</span>
+        </button>
       </a>
       <% } %>
       <%- include('./menu')%>
     </div>
   </div>
-  <form class="search-bar sb-responsive" action="/" method="get">
-    <input type="text" name="search" id="" placeholder="Buscar productos..." />
-    <button><i class="fas fa-search"></i></button>
-  </form>
   <div class="clickOutMenu"></div>
 </header>

@@ -17,16 +17,12 @@ const productController = {
       .then((product) => {
         let users = JSON.parse(fs.readFileSync("models/users.json", "utf-8"));
         let idUser = req.session.user.id;
-        console.log(idUser)
         let user = users.find((user) => user.id === idUser);
-        if (!user.cart.find((productInCart) => {
-          console.log(productInCart.id)
-          console.log(productInCart._id)
-          productInCart.id == id
-        })) {
+        if (!user.cart.find((productInCart) => productInCart.id == id)) {
           users
             .find((user) => user.id === idUser)
             .cart.push({ id: id, cantidad: 1 });
+          req.session.user = user;
           fs.writeFileSync(
             "models/users.json",
             JSON.stringify(users, null, "  ")
@@ -34,7 +30,7 @@ const productController = {
         } else {
           console.error("El producto ya existe en el carrito");
         }
-        res.status(200).redirect('/cart');
+        res.status(200).redirect("/cart");
       })
       .catch((err) => {
         res.send(err + " (El producto no existe en la API)");

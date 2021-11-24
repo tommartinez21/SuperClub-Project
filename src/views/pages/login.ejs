@@ -7,30 +7,47 @@
     <main>
       <div class="cuerpo-rojo"></div>
       <div class="div-form">
-        <div class="div-adentro">
+        <div class="div-adentro skin skin-card">
           <h2>¡Hola!</h2>
-          <% if (locals.errors) { errors.forEach(element => { %>
-          <p><%= element.msg %></p>
-          <% }) %> <% } %> <% if(locals.usuarioRegistrado){%>
-          <p><%=usuarioRegistrado%></p>
-          <% } %>
           <form method="post" action="/login" class="formulario">
-            <input type="text" name="email" id="email" placeholder="Tu email"
-            value="<%= locals.old ? old.email : "" %>" />
+            <% if (locals.errors) {%>
+            <div id="div-errores">
+              <% errors.forEach(element => { %>
+              <p><%= element.msg %></p>
+              <% }) %>
+            </div>
+            <% } %> <% if(locals.usuarioRegistrado){%>
+            <p><%=usuarioRegistrado%></p>
+            <% } %>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Tu email"
+              value="<%= locals.old ? old.email : '' %>"
+            />
             <input
               type="password"
               name="password"
               id="password"
               placeholder="Tu contraseña"
             />
-            <button>Iniciar Sesión</button>
+            <div class="remember-check">
+              <input type="checkbox" id="remember-email" />
+              <label for="remember-email">Recordar email</label>
+            </div>
+            <button id="loginBtn" class="skin skin-btn" disabled>
+              Iniciar Sesión
+            </button>
           </form>
         </div>
       </div>
-      <p class="texto-abajo">
-        ¿No tienes cuenta? <a class="links" href="/register">Regístrate</a>
+      <p class="texto-abajo skin skin-a">
+        ¿No tienes cuenta?
+        <a class="links" href="/register">Regístrate</a>
       </p>
     </main>
-    <%- include('../partials/footer')%>
+    <%- include('../partials/footer')%> <%- include('../partials/modalLogin')%>
+    <script src="/js/login.js"></script>
   </body>
 </html>

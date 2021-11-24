@@ -1,4 +1,3 @@
-<%# agregar includes include('pages/partials/back') %>
 <!DOCTYPE html>
 <html lang="en">
   <%- include('../partials/head') %>
@@ -7,41 +6,44 @@
     <%- include('../partials/header') %>
     <main>
       <%- include('../partials/back', {categoria:producto.category}) %>
-      <div class="page-product-cardinfo">
-        <% if (producto.gallery.length == 0) { %>
-        <div class="page-product-image">
-          <%- include('../partials/image-not-found') %>
-        </div>
-        <% } else { %>
+      <div class="page-product-cardinfo skin skin-card">
+        <h3 class="page-product-title mobile"><%=producto.title%></h3>
         <div class="page-product-galery">
+          <div class="galery-item">
+            <img class="img-switch" src=<%= producto.image ||
+            "/imgs/image-not-found.png" %> alt="">
+          </div>
           <% (producto.gallery).forEach(img => { %>
           <div class="galery-item">
-            <img src="<%= img %> " alt="<%= producto.title %> " />
+            <img
+              class="img-switch"
+              src="<%= img %> "
+              alt="<%= producto.title %> "
+            />
           </div>
-
           <% }) %>
         </div>
         <div class="page-product-image">
-          <img src="<%= producto.image %> " alt="<%= producto.title %> " />
+          <img id="image-product" src=<%= producto.image ||
+          "/imgs/image-not-found.png" %> alt="">
         </div>
-        <% } %>
 
         <div class="page-product-info">
-          <h3 class="page-product-title"><%=producto.title%></h3>
+          <h3 class="page-product-title desktop"><%=producto.title%></h3>
           <div class="page-product-valor">
-            <strong class="puntos"><%=producto.price%> </strong>
+            <strong class="puntos"
+              ><%=new Intl.NumberFormat().format(producto.price)%>
+            </strong>
             <p>PUNTOS<br />SUPERCLUB</p>
           </div>
           <form action="/product/addToCart" method="get">
-            <input type="text" name="id" hidden value=<%= producto._id %> />
-            <button name="agregar" class="btn-carrito">
+            <input type="text" name="id" hidden value="<%=producto._id %>" />
+            <button name="agregar" class="btn-carrito skin skin-btn">
               Agregar al Carrito
             </button>
           </form>
           <div class="page-product-description">
-            <%# (producto.description).forEach(parrafo => { %>
             <p><%= producto.description %></p>
-            <%# }) %>
           </div>
         </div>
       </div>
@@ -49,5 +51,14 @@
       include("../partials/navcat") %>
     </main>
     <%- include('../partials/footer') %>
+    <script>
+      let imagenes = document.querySelectorAll(".img-switch");
+      let selectImg = document.querySelector("#image-product");
+      imagenes.forEach((img) => {
+        img.addEventListener("click", (e) => {
+          selectImg.src = e.target.src;
+        });
+      });
+    </script>
   </body>
 </html>

@@ -1,7 +1,6 @@
 const { validationResult } = require("express-validator");
 const fs = require("fs");
 const bcrypt = require("bcryptjs");
-const { render } = require("ejs");
 
 const registerController = {
   renderRegister(req, res) {

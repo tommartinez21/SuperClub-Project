@@ -1,17 +1,17 @@
 <a href="/product/<%= product._id %> " class="product-item-link">
-    <div class="product-item">
-        <div class="product-img">
-            <img src=<%= product.image || "/imgs/image-not-found.png" %>  alt="">
-        </div>
-        <div class="product-info">
-            <div class="product-name">
-                <span><%= product.title %>  </span>
-            </div>
-            <div class='dividerProduct'></div>
-            <div class="product-price">
-                <span><%= product.price %> </span>
-                <span>PUNTOS SUPERCLUB</span>
-            </div>
-        </div>
+  <div class="product-item skin skin-card">
+    <div class="product-img">
+      <img src=<%= product.image || "/imgs/image-not-found.png" %> alt="">
     </div>
+    <div class="product-info">
+      <div class="product-name">
+        <span><%= product.title %> </span>
+      </div>
+      <div class="dividerProduct"></div>
+      <div class="product-price">
+        <span><%= product.price %> </span>
+        <span>PUNTOS SUPERCLUB</span>
+      </div>
+    </div>
+  </div>
 </a>
