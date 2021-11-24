@@ -26,7 +26,8 @@ header {
   color: white;
 }
 
-.skin.skin-card input {
+.skin.skin-card input,
+.skin.div-cupon input {
   background-color: rgb(0 0 0 / 0%);
   color: white;
 }
@@ -36,5 +37,14 @@ header {
 }
 
 .skin.skin-a a {
+  color: white;
+}
+
+.skin.skin-contador {
+  background-color: rgb(0 0 0 / 0%);
+  border: solid 1px #ccc;
+  color: white;
+}
+.skin.skin-contador a {
   color: white;
 }

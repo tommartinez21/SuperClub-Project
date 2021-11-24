@@ -12,7 +12,7 @@
 
         <% if (productos) { preciofinal = 0; contador = 0;
         productos.forEach(producto => { %>
-        <article class="cart-product-flex">
+        <article class="cart-product-flex skin skin-card">
           <div class="cart-descripcion-flex">
             <img
               src="<%= producto.image %>"
@@ -23,16 +23,16 @@
           </div>
           <div class="cart-botones-flex">
             <a class="boton">Quitar</a>
-            <div class="cart-contador">
+            <div class="cart-contador skin skin-contador">
               <a
                 class="cont-operador"
                 onclick="restarContador('<%= producto._id %>', '<%= producto.price %>')"
               >
                 -
               </a>
-              <span id="contador<%= producto._id %>"
-                ><%= producto.cantidad %></span
-              >
+              <span id="contador<%= producto._id %>">
+                <%= producto.cantidad %>
+              </span>
               <a
                 class="cont-operador"
                 onclick="sumarContador('<%= producto._id %>', '<%= producto.price %>')"
@@ -40,21 +40,21 @@
                 +
               </a>
             </div>
-            <span class="cart-puntos" id="puntos<%= producto._id %>"
-              ><%= new Intl.NumberFormat().format(producto.price *
-              producto.cantidad) %></span
-            >
+            <span class="cart-puntos" id="puntos<%= producto._id %>">
+              <%= new Intl.NumberFormat().format(producto.price *
+              producto.cantidad) %>
+            </span>
           </div>
         </article>
         <% preciofinal += producto.price }) } %>
 
         <div class="cart-puntos-total">
           <span class="cart-descripcion-final">Total de Puntos SuperClub</span>
-          <span class="cart-puntos" id="precioTotal"
-            ><%= new Intl.NumberFormat().format(preciofinal) %></span
-          >
+          <span class="cart-puntos" id="precioTotal">
+            <%= new Intl.NumberFormat().format(preciofinal) %>
+          </span>
         </div>
-        <div class="div-cupon">
+        <div class="div-cupon skin">
           <input
             type="text"
             name="cupon"
@@ -102,13 +102,14 @@
         }
       };
 
-      const botonPagar = document.querySelector("#pay-button")
-      botonPagar.addEventListener("click", () => preventCheckout())
+      const botonPagar = document.querySelector("#pay-button");
+      botonPagar.addEventListener("click", () => preventCheckout());
 
       const preventCheckout = () => {
-        alert("Esta página aún no ha sido implementada. Disculpe las molestias.")
-      }
+        alert(
+          "Esta página aún no ha sido implementada. Disculpe las molestias."
+        );
+      };
     </script>
-
   </body>
 </html>
