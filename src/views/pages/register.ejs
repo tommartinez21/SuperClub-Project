@@ -15,8 +15,9 @@
             <% }) %> <% } %> <input type="email" name="emailUsuario"
             id="emailUsuario" placeholder="Tu email" value = "<%= locals.old &&
             old.emailUsuario ? old.emailUsuario : "" %>"> <input type="text"
-            name="nombreUsuario" id="nombreUsuario" value = "<%= locals.old &&
-            old.nombreUsuario ? old.nombreUsuario : "" %>">
+            name="nombreUsuario" placeholder="Tu nombre de usuario"
+            id="nombreUsuario" value = "<%= locals.old && old.nombreUsuario ?
+            old.nombreUsuario : "" %>">
             <input
               type="password"
               name="contraseñaUsuario"

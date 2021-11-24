@@ -1,50 +1,54 @@
-body {
+body.dark {
   background-color: var(--black-body);
   color: var(--white);
 }
 
-header {
+header.dark {
   background-color: rgb(0, 0, 0, 0.25);
   border-bottom: none;
 }
 
-.skin.search-bar input {
+footer.dark {
+  background-color: rgb(0, 0, 0, 0.25);
+}
+
+.dark.skin.search-bar input {
   background-color: var(--grey);
 }
 
-.skin.search-bar button {
+.dark.skin.search-bar button {
   color: rgb(255 255 255 / 25%);
 }
 
-.skin.skin-card {
+.dark.skin.skin-card {
   background-color: var(--grey);
   color: var(--white);
   border: none;
 }
 
-.skin.skin-card label {
+.dark.skin.skin-card label {
   color: white;
 }
 
 .skin.skin-card input,
-.skin.div-cupon input {
+.dark.skin.div-cupon input {
   background-color: rgb(0 0 0 / 0%);
   color: white;
 }
 
-.skin.skin-btn {
+.dark.skin.skin-btn {
   background-color: var(--black);
 }
 
-.skin.skin-a a {
+.dark.skin.skin-a a {
   color: white;
 }
 
-.skin.skin-contador {
+.dark.skin.skin-contador {
   background-color: rgb(0 0 0 / 0%);
   border: solid 1px #ccc;
   color: white;
 }
-.skin.skin-contador a {
+.dark.skin.skin-contador a {
   color: white;
 }
