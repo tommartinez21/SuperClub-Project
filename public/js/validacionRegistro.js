@@ -12,15 +12,7 @@ let errPassw = true
 let errEmail = true
 let errName = true
 
-const toggleButton = () => {
-    console.log("yendooo", errEmail, errName, errPassw)
-    if (errPassw || errEmail || errName) {
-        // si todos están "hidden" significa que no hay errores
-        registerBtn.disabled = true
-    } else {
-        registerBtn.disabled = false
-    }
-}
+const toggleButton = () => registerBtn.disabled = errPassw || errEmail || errName ? true : false
 
 contraseñaUsuario.addEventListener("keyup", (e) =>{
     if (e.target.value.length <8){
