@@ -46,6 +46,17 @@
   background-color: #494f51;
   color: white;
   border: none;
+  transition: 250ms ease-out;
+}
+
+.div-form button:hover {
+  background-color: red;
+  color: white;
+}
+
+.div-form button:disabled {
+  background-color: rgb(151, 151, 151);
+  color: lightgray;
 }
 
 .texto-abajo {

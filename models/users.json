@@ -57,5 +57,19 @@
     "nombreUsuario": "ssadsaas",
     "emailUsuario": "",
     "contraseñaUsuario": "$2a$10$Rochox/flBJ5.DrYAB79nO6VXVpqGAen3THnf1vUVaJXaenV0dj12"
-  } 
+  },
+  {
+    "id": 9,
+    "nombreUsuario": "toto123",
+    "emailUsuario": "toto@hola.com",
+    "contraseñaUsuario": "$2a$10$E1F3rX11DnZctlSlGnMOCukjwujqPx2oMmaSM53lwz1IONqeRGcA6",
+    "cart": []
+  },
+  {
+    "id": 10,
+    "nombreUsuario": "nico1",
+    "emailUsuario": "nico@gmail.com",
+    "contraseñaUsuario": "$2a$10$THj0whOUan0uDapQAmxuiO8OcYriofDMCvRam/cQDObX9Hz.v65oG",
+    "cart": []
+  }
 ]
