@@ -151,6 +151,11 @@ main {
     padding: 5px 40px 10px 40px;
 }
 
+.changeMode {
+  display: flex;
+  align-items: center;
+}
+
 .abiertoD {
     max-height: 400px !important;
 }
@@ -159,6 +164,7 @@ main {
     transform: translateX(0) !important;
 }
 .botonSwitch {
+  cursor: pointer;
     width: 30px;
     border-radius: 18px;
     height: 18px;
@@ -167,6 +173,7 @@ main {
     display: flex;
     transition: 0.5s background-color, 0.5s border;
     align-items: center;
+    margin-right: 10px;
 }
 
 .opcionSwitch {
