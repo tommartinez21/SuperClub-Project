@@ -1,6 +1,8 @@
 let rememberCheck = document.querySelector("#remember-email");
 let email = document.querySelector("#email");
 let loginForm = document.querySelector(".formulario");
+let divErrores = document.querySelector("#div-errores");
+let modalLogin = document.querySelector("#modalLogin");
 
 let loginBtn = document.querySelector("#loginBtn")
 let errEmail = true
@@ -22,6 +24,10 @@ window.addEventListener("load", (e) => {
     email.value = emailStorage;
     rememberCheck.checked = true;
   }
+  if (divErrores.innerHTML !== ""){
+    e.preventDefault();
+    modalLogin.hidden = false;
+  }
 });
 
 loginForm.addEventListener("submit", (e) => {
@@ -31,3 +37,9 @@ loginForm.addEventListener("submit", (e) => {
     localStorage.removeItem("email");
   }
 });
+
+
+closeModal = () => {
+  console.log()
+  modalLogin.hidden=true
+}
