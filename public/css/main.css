@@ -157,6 +157,9 @@ main {
 .abiertoM {
     transform: translateX(0) !important;
 }
+.botonSwitch {
+    
+}
 
 .clickOutMenu {
     z-index: 80;
