@@ -1,0 +1,19 @@
+<div class="menu">
+    <div class="userMenu">
+      <img src="/imgs/perfil.png" alt="Imagen de perfil" />
+      <% if (session.user) { %>
+        <%=session.user.nombreUsuario %>
+      <% } %>
+    </div>
+    <div class="dividerMenu"></div>
+    <div class="listMenu">
+      <ul>
+        <li>Inicio</li>
+        <li>Mis Compras</li>
+        <li>Favoritos</li>
+        <li>Historial</li>
+      </ul>
+    </div>
+    <div class="dividerMenu"></div>
+    <div class="changeMode">Cambiar a Tema Oscuro</div>
+</div>

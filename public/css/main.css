@@ -13,6 +13,9 @@
     font-family: "Open Sans", sans-serif;
 }
 
+html {
+    overflow-x: hidden;
+}
 
 body {
     background-color: var(--lightgrey);
@@ -20,10 +23,10 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 main {
     width: 100%;
     flex-grow: 1;
+    position: relative;
 }
 
 .cont-product-heroes {
@@ -107,6 +110,67 @@ main {
 }
 
 
+/* MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU*/
+
+.menu {
+    position: absolute;
+    z-index: 100;
+    transition: 0.5s max-height ease-out,
+    0.5s transform ;
+    overflow: hidden;
+}
+.userMenu {
+    margin: 0;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.userMenu img {
+    margin-right: 10px;
+}
+
+.dividerMenu {
+    height: 1px;
+    width: 100%;
+    background-color: lightgray;
+}
+
+.listMenu ul {
+    list-style: none;
+    padding: 5px 40px;
+}
+.listMenu li:not(:last-child) {
+    margin-bottom: 10px;
+}
+.changeMode {
+padding: 5px 40px 10px 40px;
+}
+
+.abiertoD {
+    max-height: 400px !important;
+}
+.abiertoM {
+    transform: translateX(0) !important;
+}
+
+.clickOutMenu {
+    z-index: 80;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    opacity: 0;
+    transition: 0.5s opacity;
+}
+
+.abiertoClickOut {
+    display: block;
+    opacity: 1;
+}
+
 /*TE PUEDE INTERESAR*/
 
 .cont-products-items {
@@ -151,12 +215,22 @@ main {
     .products-heroes-bg {
         filter: blur(0px);
     }
+    .menu {
+        width: 400px;
+        height: 100vh;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        transform: translateX(100vw);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+        background-color: white;
+        top: 0;
+        right: 0;
+    }
 }
 
 @media (max-width:525px) {
     .cont-products-items>div {
         grid-template-columns: 1fr;
-        
     }
 }
 
@@ -175,5 +249,14 @@ main {
 @media (min-width:1072px) {
     .cont-products-items>div {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .menu {
+        width: 300px;
+        background-color: white;
+        top: 130%;
+        max-height: 0;
+        border-radius: 10px;
+        right: 0;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
     }
 }
