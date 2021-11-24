@@ -24,15 +24,17 @@ const onClickFuera = () => {
 };
 
 const logout = () => {
-    fetch("/login", {method="DELETE"})
-    .then(res => res.json())
-    .then(res => console.log(res))
-}
+  fetch("/login", {
+    method: "DELETE",
+  })
+    .then((res) => res.json())
+    .then((res) => console.log(res));
+};
 
 userButton.addEventListener("click", onClickUserButton);
 
 clickOut.addEventListener("click", onClickFuera);
 
-changeMode.addEventListener("click", modoOscuro);
+// changeMode.addEventListener("click", modoOscuro);
 
-changeMode.addEventListener("click", logout);
+logoutButton.addEventListener("click", logout);
