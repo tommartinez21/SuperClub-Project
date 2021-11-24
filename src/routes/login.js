@@ -30,6 +30,4 @@ router.get("/", loginController.renderLogin);
 
 router.post("/", validations, loginController.postLogin);
 
-router.delete("/", loginController.logout);
-
 module.exports = router;
