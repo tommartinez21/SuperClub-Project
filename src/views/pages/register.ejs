@@ -14,11 +14,11 @@
                             <% }) %> <% } %>                  
                         <form method="POST" action="/register" class="formulario">
                             <input type="email" name="emailUsuario" id="emailUsuario" placeholder="Tu email" value = "<%= locals.old && old.emailUsuario ? old.emailUsuario : "" %>">
-                            <p hidden class="errorEmail"></p>
+                            <p hidden class="errorEmail obj-error"></p>
                             <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Tu nombre de usuario" value = "<%= locals.old && old.nombreUsuario ? old.nombreUsuario : "" %>">
-                            <p hidden class="errorNombreUsuario"></p>
+                            <p hidden class="errorNombreUsuario obj-error"></p>
                             <input type="password" name="contraseñaUsuario" id="contraseñaUsuario" placeholder="Tu contraseña">
-                            <p hidden class="errorPassword"></p>
+                            <p hidden class="errorPassword obj-error"></p>
                             <button id="registerBtn" disabled>Crear Cuenta</button>
                         </form>
                     </div>

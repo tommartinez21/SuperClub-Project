@@ -65,5 +65,12 @@
         "cantidad": 1
       }
     ]
+  },
+  {
+    "id": 7,
+    "nombreUsuario": "niko",
+    "emailUsuario": "niko@gmail.com",
+    "contraseñaUsuario": "$2a$10$uK2vCIU8nwjgp3nGOCyT8O1HG2Qn9qIFHdAugn.8m5jMFr4IGP3qS",
+    "cart": []
   }
 ]

@@ -18,8 +18,22 @@
 
 .div-form h2 {
   padding-top: 20px;
+}
+
+.div-form h2, .div-form p {
   margin: 5px;
   padding-left: 15px;
+}
+
+.div-form p {
+  color: red;
+  font-weight: bold;
+}
+
+.obj-error {
+  font-size: 12px;
+  font-weight: 300;
+  padding-left: 0;
 }
 
 .formulario {
@@ -31,7 +45,7 @@
 
 .div-form input {
   padding: 2.5%;
-  margin: 3%;
+  margin: 3% 3% 0 3%;
   width: 100%;
   border-radius: 20px;
   border: solid 2px #ccc;
