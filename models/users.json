@@ -65,5 +65,12 @@
         "cantidad": 1
       }
     ]
+  },
+  {
+    "id": 7,
+    "nombreUsuario": "hola",
+    "emailUsuario": "hola@s.com",
+    "contraseñaUsuario": "$2a$10$pbmTv6.HUIURVS5AY89Tfey80ODSo3rs9nGYMvNOzMw04OTg.g5Ji",
+    "cart": []
   }
 ]
