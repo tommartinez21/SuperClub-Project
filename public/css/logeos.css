@@ -76,3 +76,16 @@
 .remember-check input {
   width: auto;
 }
+
+#modalLogin {
+  width: 30%;
+  height: 30%;
+  z-index: 10;
+  position: absolute;
+  top: 30%;
+  left: 35%;
+}
+
+.texto-modal {
+  text-align: center;
+}

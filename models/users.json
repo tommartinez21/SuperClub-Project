@@ -38,5 +38,54 @@
         "cantidad": 1
       }
     ]
+  },
+  {
+    "id": 4,
+    "nombreUsuario": "pepe",
+    "emailUsuario": "pepe@hotmail.com",
+    "contraseñaUsuario": "$2a$10$Ow3n44ipePrh5kMv1hLUYOfqY4X157iSs6BpC0zIxvxp9/pQgOVU2",
+    "cart": []
+  },
+  {
+    "id": 5,
+    "nombreUsuario": "feliz",
+    "emailUsuario": "feliz@hotmail.com",
+    "contraseñaUsuario": "$2a$10$9ZIPX.t7SK7Sw1UXY4aPrutItVfntfDPLDTH9Q29VFTVBQf8scO.G",
+    "cart": []
+  },
+  {
+    "id": 6,
+    "nombreUsuario": "enojo",
+    "emailUsuario": "enojo@hotmail.com",
+    "contraseñaUsuario": "$2a$10$MawDhMyUvapfTW9hkqUEZ.z/ACK.n01MrdaexIGpVkDMuYaeHNs3O",
+    "cart": []
+  },
+  {
+    "id": 7,
+    "nombreUsuario": "kevin",
+    "emailUsuario": "kevin@pepe.com",
+    "contraseñaUsuario": "$2a$10$si8I7GhLJMKOhbDgZJ66bugObZHm87/qM4y1AR4e9.sPfCUWYrcbm",
+    "cart": []
+  },
+  {
+    "id": 8,
+    "nombreUsuario": "nicopepe",
+    "emailUsuario": "nico@pepe.com",
+    "contraseñaUsuario": "$2a$10$BLpariHQQorZAcq8M9q4Gu3YX6XxHtGK2UaP9hGkX6P8LfPy5GqTa",
+    "cart": []
+  },
+  {
+    "id": 9,
+    "nombreUsuario": "alfonso",
+    "emailUsuario": "alfonso@hotmail.com",
+    "contraseñaUsuario": "$2a$10$iydnosHwbh2pg4ApugzUHOVqIuJJylcF/rmWt.gS2on9YC4uWSG/W",
+    "cart": []
+  },
+  {
+    "id": 10,
+    "nombreUsuario": "julian",
+    "emailUsuario": "julian@hotmail.com",
+    "contraseñaUsuario": "$2a$10$rz4lVp4KNODBHAwbuqFsjuuDNbuE1ndJ.vhbjOLO7PRgXode8T50a",
+    "cart": []
   }
 ]
