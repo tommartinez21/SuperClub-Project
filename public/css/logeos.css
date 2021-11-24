@@ -107,13 +107,55 @@
 
 #modalLogin {
   width: 30%;
-  height: 30%;
   z-index: 10;
   position: absolute;
-  top: 30%;
+  top: 33%;
   left: 35%;
+  padding-bottom: 20px;
 }
 
 .texto-modal {
   text-align: center;
+  padding: 1.5px;
+}
+
+.botonModal {
+  padding: 2%;
+  width: 45%;
+  border-radius: 20px;
+  background-color: #494f51;
+  color: white;
+  border: none;
+  margin-left: 28%;
+}
+
+.div-modal {
+  background-color: white;
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+}
+
+#modalLogin h3 {
+  padding-top: 3%;
+  color: red;
+  text-decoration: underline;
+}
+
+#modalLogin p {
+  font-weight: bold;
+}
+
+@media (max-width:600px){
+  .texto-modal{
+    font-size: 12px;
+  }
+  #modalLogin{
+    width: 50%;
+    left: 25%;
+  }
+  .botonModal{
+    width: 80%;
+    margin-left: 10%;
+  }
 }
