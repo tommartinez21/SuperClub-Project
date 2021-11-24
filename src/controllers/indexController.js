@@ -31,6 +31,13 @@ const indexController = {
     fs.writeFileSync("models/users.json", JSON.stringify(users, null, "  "));
     res.send("OK");
   },
+
+  logout: (req, res) => {
+    if (req.session.user) {
+      req.session.user = null;
+      res.redirect("/");
+    }
+  },
 };
 
 module.exports = indexController;

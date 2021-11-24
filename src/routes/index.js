@@ -6,4 +6,6 @@ router.get("/", indexController.renderIndex);
 
 router.post("/theme", indexController.saveTheme);
 
+router.get("/logout", indexController.logout);
+
 module.exports = router;
