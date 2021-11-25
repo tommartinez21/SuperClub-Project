@@ -111,7 +111,6 @@ main {
 /* MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU*/
 
 .menu {
-<<<<<<< HEAD
     width: 300px;
     max-width: 300px;
     position: absolute;
@@ -121,15 +120,6 @@ main {
     overflow: hidden;
     right: 0;
     background-color: white;
-=======
-  position: absolute;
-  z-index: 100;
-  transition: 0.5s max-height ease-out, 0.5s transform;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-  right: 0;
-  background-color: white;
->>>>>>> 80d908e4f64ceaa8e32664824e378ed876f495ee
 }
 
 .userMenu {
@@ -163,14 +153,9 @@ main {
   padding: 5px 40px 10px 40px;
 }
 
-<<<<<<< HEAD
 .changeMode,
 .cerrarSesion {
     padding: 5px 40px 10px 40px;
-=======
-.cerrarSesion a {
-  color: var(--red);
->>>>>>> 80d908e4f64ceaa8e32664824e378ed876f495ee
 }
 
 .changeMode {
@@ -259,7 +244,6 @@ main {
 
 /*MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA*/
 
-<<<<<<< HEAD
 @media (max-width:1072px) {
     .cont-products-items>h3 {
         text-align: center;
@@ -318,63 +302,3 @@ main {
         border-radius: 10px;
     }
 }
-=======
-@media (max-width: 1072px) {
-  .cont-products-items > h3 {
-    text-align: center;
-  }
-  .cont-product-heroes {
-    margin: 100px 0;
-  }
-  .products-heroes {
-    width: 80%;
-  }
-  .products-heroes:first-child {
-    margin-right: 0;
-  }
-  .products-heroes:last-child {
-    margin-top: 15px;
-    margin-bottom: -50px;
-  }
-  .products-heroes-bg {
-    filter: blur(0px);
-  }
-  .menu {
-    height: 100vh;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    transform: translateX(100vw);
-    top: 0;
-  }
-}
-
-@media (max-width: 525px) {
-  .cont-products-items > div {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 526px) and (max-width: 800px) {
-  .cont-products-items > div {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width: 800px) and (max-width: 1072px) {
-  .cont-products-items > div {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-@media (min-width: 1072px) {
-  .cont-products-items > div {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-  .menu {
-    width: 300px;
-    top: 130%;
-    max-height: 0;
-    border-radius: 10px;
-  }
-}
->>>>>>> 80d908e4f64ceaa8e32664824e378ed876f495ee
