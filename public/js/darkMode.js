@@ -4,11 +4,14 @@ let botonSwitch = document.querySelector("#botonSwitch");
 let opcionSwitch = document.querySelector("#opcionSwitch");
 
 window.onload = () => {
-  console.log(isDark.innerHTML);
-  if (isDark.innerHTML === "true") {
+  if (isDark) {
+    if (isDark.innerHTML === "true") {
+      oscuro();
+    } else {
+      claro();
+    }
+  } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
     oscuro();
-  } else {
-    claro();
   }
 };
 
@@ -33,7 +36,6 @@ let claro = () => {
 };
 
 let cambiarTema = () => {
-  debugger;
   fetch("/theme", { method: "POST" })
     .then((res) => res.json())
     .then((data) => console.log(data));
