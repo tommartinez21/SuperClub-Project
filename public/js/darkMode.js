@@ -4,8 +4,14 @@ let botonSwitch = document.querySelector("#botonSwitch");
 let opcionSwitch = document.querySelector("#opcionSwitch");
 
 window.onload = () => {
+  console.log(isDark);
   if (isDark) {
-    if (isDark.innerHTML === "true") {
+    if (
+      !isDark.innerHTML &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      oscuro();
+    } else if (isDark.innerHTML === "true") {
       oscuro();
     } else {
       claro();
