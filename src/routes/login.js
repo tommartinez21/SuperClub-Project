@@ -18,7 +18,6 @@ const validations = [
       let user = actions.getUser(req.body.email);
       if (!user) {
         throw new Error("El email no tiene usuario registrado");
-
       }
       if (!actions.validatePass(user, value)) {
         throw new Error("La contraseña es incorrecta");

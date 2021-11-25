@@ -40,6 +40,7 @@
       <button class="user-button">
         <img src="/imgs/perfil.png" alt="Imagen de perfil" />
         <span class="username-button"> <%= session.user.nombreUsuario %></span>
+        <div hidden id="is-dark"><%= session.user.dark %></div>
       </button>
       <% } else { %>
       <a href="/login">
@@ -54,8 +55,7 @@
           <span class="redir-text">Registrarse</span>
         </button>
       </a>
-      <% } %>
-      <%- include('./menu')%>
+      <% } %> <%- include('./menu')%>
     </div>
   </div>
   <div class="clickOutMenu"></div>

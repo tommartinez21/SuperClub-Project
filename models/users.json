@@ -24,8 +24,13 @@
       {
         "id": "6191e5a3edf22907883a08ae",
         "cantidad": 1
+      },
+      {
+        "id": "6191e4dbedf2290788389240",
+        "cantidad": 1
       }
-    ]
+    ],
+    "dark": false
   },
   {
     "id": 3,
@@ -68,9 +73,30 @@
   },
   {
     "id": 7,
-    "nombreUsuario": "hola",
-    "emailUsuario": "hola@s.com",
-    "contraseñaUsuario": "$2a$10$pbmTv6.HUIURVS5AY89Tfey80ODSo3rs9nGYMvNOzMw04OTg.g5Ji",
+    "nombreUsuario": "niko",
+    "emailUsuario": "niko@gmail.com",
+    "contraseñaUsuario": "$2a$10$uK2vCIU8nwjgp3nGOCyT8O1HG2Qn9qIFHdAugn.8m5jMFr4IGP3qS",
     "cart": []
+  },
+  {
+    "id": 8,
+    "nombreUsuario": "mimail",
+    "emailUsuario": "mail@test.com",
+    "contraseñaUsuario": "$2a$10$d.wuLkwCXxjgt3JFCSJnUe/.YqmEzOMtXRncndCTYwvM2McolXhKq",
+    "cart": [
+      {
+        "id": "6191e4dbedf2290788389240",
+        "cantidad": 1
+      },
+      {
+        "id": "6191cb5ec654f145d4326b85",
+        "cantidad": 1
+      },
+      {
+        "id": "6191cb984f875644e0b8e99b",
+        "cantidad": 1
+      }
+    ],
+    "dark": true
   }
 ]

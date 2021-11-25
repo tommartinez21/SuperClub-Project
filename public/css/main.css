@@ -22,10 +22,10 @@ body {
 }
 
 main {
-    width: 100%;
-    flex-grow: 1;
-    position: relative;
-    overflow-x: hidden;
+  width: 100%;
+  flex-grow: 1;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .cont-product-heroes {
@@ -70,9 +70,9 @@ main {
     filter: blur(0px);
 }
 
-.products-heroes>*:not(.products-heroes-bg) {
-    filter: blur(0px);
-    z-index: 10;
+.products-heroes > *:not(.products-heroes-bg) {
+  filter: blur(0px);
+  z-index: 10;
 }
 
 .products-heroes:first-child {
@@ -108,10 +108,10 @@ main {
     text-shadow: 0 0 5px black;
 }
 
-
 /* MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU*/
 
 .menu {
+<<<<<<< HEAD
     width: 300px;
     max-width: 300px;
     position: absolute;
@@ -121,37 +121,56 @@ main {
     overflow: hidden;
     right: 0;
     background-color: white;
+=======
+  position: absolute;
+  z-index: 100;
+  transition: 0.5s max-height ease-out, 0.5s transform;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  right: 0;
+  background-color: white;
+>>>>>>> 80d908e4f64ceaa8e32664824e378ed876f495ee
 }
 
 .userMenu {
-    margin: 0;
-    padding: 15px;
-    display: flex;
-    align-items: center;
+  margin: 0;
+  padding: 15px;
+  display: flex;
+  align-items: center;
 }
 
 .userMenu img {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .dividerMenu {
-    height: 1px;
-    width: 100%;
-    background-color: lightgray;
+  height: 1px;
+  width: 100%;
+  background-color: lightgray;
 }
 
 .listMenu ul {
-    list-style: none;
-    padding: 5px 40px;
+  list-style: none;
+  padding: 5px 40px;
 }
 
 .listMenu li:not(:last-child) {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .changeMode,
 .cerrarSesion {
+  padding: 5px 40px 10px 40px;
+}
+
+<<<<<<< HEAD
+.changeMode,
+.cerrarSesion {
     padding: 5px 40px 10px 40px;
+=======
+.cerrarSesion a {
+  color: var(--red);
+>>>>>>> 80d908e4f64ceaa8e32664824e378ed876f495ee
 }
 
 .changeMode {
@@ -160,24 +179,24 @@ main {
 }
 
 .abiertoD {
-    max-height: 400px !important;
+  max-height: 400px !important;
 }
 
 .abiertoM {
-    transform: translateX(0) !important;
+  transform: translateX(0) !important;
 }
 
 .botonSwitch {
   cursor: pointer;
-    width: 30px;
-    border-radius: 18px;
-    height: 18px;
-    background-color: white;
-    border: 1px solid rgba(0, 0, 9, 0.3);
-    display: flex;
-    transition: 0.5s background-color, 0.5s border;
-    align-items: center;
-    margin-right: 10px;
+  width: 30px;
+  border-radius: 18px;
+  height: 18px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 9, 0.3);
+  display: flex;
+  transition: 0.5s background-color, 0.5s border;
+  align-items: center;
+  margin-right: 10px;
 }
 
 .opcionSwitch {
@@ -200,19 +219,19 @@ main {
 }
 
 .clickOutMenu {
-    z-index: 80;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100vw;
-    height: 100vh;
-    display: none;
-    transition: 1s background-color;
+  z-index: 80;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  transition: 1s background-color;
 }
 
 .abiertoClickOut {
-    display: block;
-    background-color: rgba(0, 0, 0, .6);
+  display: block;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 
@@ -240,6 +259,7 @@ main {
 
 /*MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA*/
 
+<<<<<<< HEAD
 @media (max-width:1072px) {
     .cont-products-items>h3 {
         text-align: center;
@@ -298,3 +318,63 @@ main {
         border-radius: 10px;
     }
 }
+=======
+@media (max-width: 1072px) {
+  .cont-products-items > h3 {
+    text-align: center;
+  }
+  .cont-product-heroes {
+    margin: 100px 0;
+  }
+  .products-heroes {
+    width: 80%;
+  }
+  .products-heroes:first-child {
+    margin-right: 0;
+  }
+  .products-heroes:last-child {
+    margin-top: 15px;
+    margin-bottom: -50px;
+  }
+  .products-heroes-bg {
+    filter: blur(0px);
+  }
+  .menu {
+    height: 100vh;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transform: translateX(100vw);
+    top: 0;
+  }
+}
+
+@media (max-width: 525px) {
+  .cont-products-items > div {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 526px) and (max-width: 800px) {
+  .cont-products-items > div {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1072px) {
+  .cont-products-items > div {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1072px) {
+  .cont-products-items > div {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .menu {
+    width: 300px;
+    top: 130%;
+    max-height: 0;
+    border-radius: 10px;
+  }
+}
+>>>>>>> 80d908e4f64ceaa8e32664824e378ed876f495ee

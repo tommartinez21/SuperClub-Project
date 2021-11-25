@@ -1,4 +1,5 @@
 const fetch = require("node-fetch");
+const fs = require("fs");
 const { check } = require("express-validator");
 
 const indexController = {
@@ -20,6 +21,22 @@ const indexController = {
       products2,
       session: req.session,
     });
+  },
+
+  saveTheme: (req, res) => {
+    let users = JSON.parse(fs.readFileSync("models/users.json", "utf-8"));
+    let user = users.find((user) => user.id === req.session.user.id);
+    user.dark = !user.dark;
+    req.session.user.dark = user.dark;
+    fs.writeFileSync("models/users.json", JSON.stringify(users, null, "  "));
+    res.json({ message: "Tema cambiado" });
+  },
+
+  logout: (req, res) => {
+    if (req.session.user) {
+      req.session.user = null;
+      res.redirect("/");
+    }
   },
 };
 
