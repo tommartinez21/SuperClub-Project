@@ -29,7 +29,7 @@ const indexController = {
     user.dark = !user.dark;
     req.session.user.dark = user.dark;
     fs.writeFileSync("models/users.json", JSON.stringify(users, null, "  "));
-    res.send("OK");
+    res.json({ message: "Tema cambiado" });
   },
 
   logout: (req, res) => {

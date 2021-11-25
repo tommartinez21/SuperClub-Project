@@ -4,7 +4,6 @@ let botonSwitch = document.querySelector("#botonSwitch");
 let opcionSwitch = document.querySelector("#opcionSwitch");
 
 window.onload = () => {
-  console.log(isDark);
   if (isDark) {
     if (
       !isDark.innerHTML &&
@@ -29,6 +28,7 @@ let oscuro = () => {
   document.querySelector("footer").classList.add("dark");
   botonSwitch.classList.add("botonSwitchOn");
   opcionSwitch.classList.add("opcionSwitchOn");
+  if (isDark) isDark.innerHTML = "true";
 };
 
 let claro = () => {
@@ -39,12 +39,18 @@ let claro = () => {
   document.querySelector("footer").classList.remove("dark");
   botonSwitch.classList.remove("botonSwitchOn");
   opcionSwitch.classList.remove("opcionSwitchOn");
+  if (isDark) isDark.innerHTML = "false";
 };
 
 let cambiarTema = () => {
-  fetch("/theme", { method: "POST" })
+  fetch("/theme", {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+    },
+  })
     .then((res) => res.json())
-    .then((data) => console.log(data));
+    .then((data) => console.log(data.message));
 
   if (isDark.innerHTML === "true") {
     claro();
