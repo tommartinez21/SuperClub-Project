@@ -22,4 +22,4 @@ userButton.addEventListener('click', onClickUserButton)
 
 clickOut.addEventListener('click', onClickFuera)
 
-changeMode.addEventListener('click', modoOscuro)
+changeMode.addEventListener('click', cambiarTema )
